@@ -24,7 +24,8 @@ class Pages extends BaseController
     public function login()
     {
         $data=[
-            'title'=>'login'
+            'title'=>'login',
+            'favicon'=>'/assets/images/msglow_large.png'
         ];
         echo view('auth/login',$data);
     }
@@ -32,7 +33,8 @@ class Pages extends BaseController
     public function registrasi()
     {
         $data=[
-            'title'=>'registrasi'
+            'title'=>'registrasi',
+            'favicon'=>'/assets/images/msglow_large.png'
         ];
         return view('auth/register',$data); 
     }

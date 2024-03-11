@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title><?=$title; ?></title>
+    <link rel="shortcut icon" type="image/x-icon" href="<?=$favicon;?>">
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url();?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
