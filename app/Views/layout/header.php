@@ -45,7 +45,7 @@
         <div class="row align-items-center">
             <div class="col-5 col-sm-6 col-lg-3">
                 <div class="header-logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img class="logo-main" src="/assets/images/logo.png" width="200" height="120" alt="Logo" />
                     </a>
                 </div>
