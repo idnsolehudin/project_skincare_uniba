@@ -21,5 +21,21 @@ class Pages extends BaseController
         echo view ('pages/about');
         echo view('layout/foother');
     }
+    public function login()
+    {
+        $data=[
+            'title'=>'login'
+        ];
+        echo view('auth/login',$data);
+    }
+
+    public function registrasi()
+    {
+        $data=[
+            'title'=>'registrasi'
+        ];
+        return view('auth/register',$data); 
+    }
+
 
 }
