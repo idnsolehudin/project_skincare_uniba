@@ -1,0 +1,50 @@
+CRITICAL - 2024-03-11 17:00:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/registrasi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/registrasi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/registrasi', [], true)
+ 3 APPPATH\Controllers\Pages.php(36): view('auth/registrasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->registrasi()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-11 17:00:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/registrasi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/registrasi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/registrasi', [], true)
+ 3 APPPATH\Controllers\Pages.php(36): view('auth/registrasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->registrasi()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-11 17:00:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/registrasi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/registrasi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/registrasi', [], true)
+ 3 APPPATH\Controllers\Pages.php(36): view('auth/registrasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->registrasi()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-11 17:01:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/registrasi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/registrasi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/registrasi', [], true)
+ 3 APPPATH\Controllers\Pages.php(37): view('auth/registrasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->registrasi()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-11 17:01:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/registrasi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/registrasi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/registrasi', [], true)
+ 3 APPPATH\Controllers\Pages.php(37): view('auth/registrasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->registrasi()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
