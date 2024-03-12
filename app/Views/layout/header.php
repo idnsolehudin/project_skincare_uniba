@@ -142,6 +142,7 @@
                     </button>
 
                     <a class="header-action-btn" href="pages/login">
+                        
                         <span class="icon">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect class="icon-rect" width="30" height="30" fill="url(#pattern3)"/>
