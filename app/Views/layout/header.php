@@ -55,8 +55,8 @@
                     <ul class="main-nav justify-content-start">
                         <li class="has-submenu"><a href="/">home</a>
                             <ul class="submenu-nav">
-                                <li><a href="index.html">Home One</a></li>
-                                <li><a href="index-two.html">Home Two</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                
                             </ul>
                         </li>
                         <li><a href="/pages/about">about</a></li>

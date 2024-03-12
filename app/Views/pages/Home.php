@@ -125,8 +125,8 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Whitening Luminos</a></h4>
                                     <div class="prices">
-                                        <span class="price">$210.00</span>
-                                        <span class="price-old">300.00</span>
+                                        <span class="price">Rp. 300.000</span>
+                                
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
@@ -176,13 +176,13 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Red Jelly</a></h4>
                                     <div class="prices">
-                                        <span class="price">$210.00</span>
-                                        <span class="price-old">300.00</span>
+                                        <span class="price">Rp. 300.000</span>
+                                        <span class="price-old">350.000</span>
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
                                             <span>Add to cart</span>
-                                        </button>
+                                        </button
                                         <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
                                             <i class="fa fa-expand"></i>
                                         </button>
@@ -227,8 +227,8 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Charcoal Clay Mask</a></h4>
                                     <div class="prices">
-                                        <span class="price">$210.00</span>
-                                        <span class="price-old">300.00</span>
+                                        <span class="price">Rp. 150.000</span>
+                                        
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
@@ -278,8 +278,8 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Night Cream</a></h4>
                                     <div class="prices">
-                                        <span class="price">$210.00</span>
-                                        <span class="price-old">300.00</span>
+                                        <span class="price">Rp. 85.000</span>
+                                        
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
@@ -329,8 +329,8 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Luminos Glowing Serum</a></h4>
                                     <div class="prices">
-                                        <span class="price">$210.00</span>
-                                        <span class="price-old">300.00</span>
+                                        <span class="price">Rp. 150.000</span>
+                                        
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
@@ -380,8 +380,8 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Whitening Lifting Serum</a></h4>
                                     <div class="prices">
-                                        <span class="price">$210.00</span>
-                                        <span class="price-old">300.00</span>
+                                        <span class="price">Rp. 150.000</span>
+                                        
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
