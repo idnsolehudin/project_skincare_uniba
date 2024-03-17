@@ -70,7 +70,7 @@
                         </li>
                         <li class="has-submenu"><a href="pages/login">Pages</a>
                             <ul class="submenu-nav">
-                                <li><a href="pages/login">My Account</a></li>
+                                <li><a href="auth/login">My Account</a></li>
                                 <li><a href="faq.html">Frequently Questions</a></li>
                                 <li><a href="page-not-found.html">Page Not Found</a></li>
                             </ul>
@@ -1150,4 +1150,4 @@
 
     </div>
 <?= $this->endSection(); ?>
->>>>>>> 7a3d5e6f078549e5b07b22714f93ca93622f45c5
+
