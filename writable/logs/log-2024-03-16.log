@@ -1,0 +1,601 @@
+ERROR - 2024-03-16 04:05:17 --> mysqli_sql_exception: Table 'skincare_store.user' doesn't exist in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehu...')
+#13 {main}
+CRITICAL - 2024-03-16 04:05:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 04:05:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 04:05:17 --> [Caused by] mysqli_sql_exception: Table 'skincare_store.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-16 04:05:22 --> mysqli_sql_exception: Table 'skincare_store.produk' doesn't exist in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehu...')
+#13 {main}
+CRITICAL - 2024-03-16 04:05:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 04:05:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `produk`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `produk`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 04:05:22 --> [Caused by] mysqli_sql_exception: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `produk`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `produk`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `produk`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-16 04:05:32 --> mysqli_sql_exception: Table 'skincare_store.produk' doesn't exist in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehu...')
+#13 {main}
+CRITICAL - 2024-03-16 04:05:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 04:05:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `produk`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `produk`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 04:05:32 --> [Caused by] mysqli_sql_exception: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `produk`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `produk`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `produk`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-16 08:00:01 --> mysqli_sql_exception: Can't create table `skincare_store`.`product` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-065016_Product.php(33): CodeIgniter\Database\Forge->createTable('product')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\Product->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:03:56 --> mysqli_sql_exception: Can't create table `skincare_store`.`product` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-065016_Product.php(33): CodeIgniter\Database\Forge->createTable('product')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\Product->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:08:10 --> mysqli_sql_exception: Can't create table `skincare_store`.`product` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-065016_Product.php(33): CodeIgniter\Database\Forge->createTable('product')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\Product->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:10:16 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:11:02 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:11:23 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:13:00 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:13:20 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:13:52 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:16:13 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:23:54 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:24:43 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:28:52 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:30:00 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 16:44:02 --> mysqli_sql_exception: Can't create table `skincare_store`.`orderdetail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('orderdetail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 18:34:12 --> mysqli_sql_exception: Can't create table `skincare_store`.`order_detail` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-070110_OrderDetail.php(37): CodeIgniter\Database\Forge->createTable('order_detail')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\OrderDetail->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 19:03:07 --> mysqli_sql_exception: Can't create table `skincare_store`.`wishlist` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `w...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `w...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `w...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `w...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-071248_Wishlist.php(37): CodeIgniter\Database\Forge->createTable('wishlist')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\Wishlist->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 19:03:33 --> mysqli_sql_exception: Can't create table `skincare_store`.`wishlist` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `w...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `w...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `w...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `w...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-071248_Wishlist.php(37): CodeIgniter\Database\Forge->createTable('wishlist')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\Wishlist->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-03-16 19:06:10 --> mysqli_sql_exception: Can't create table `skincare_store`.`order` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `o...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-03-16-072216_Order.php(27): CodeIgniter\Database\Forge->createTable('order')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\Order->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2024-03-16 19:51:39 --> ParseError: syntax error, unexpected token "<<", expecting "function" or "const"
+in APPPATH\Controllers\Pages.php on line 33.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Controllers\\pages.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\pages')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\pages')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\pages', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-16 19:52:38 --> mysqli_sql_exception: Table 'skincare_store.produk' doesn't exist in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehu...')
+#13 {main}
+CRITICAL - 2024-03-16 19:52:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 19:52:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `produk`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `produk`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 19:52:38 --> [Caused by] mysqli_sql_exception: Table 'skincare_store.produk' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `produk`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `produk`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `produk`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-16 19:52:47 --> mysqli_sql_exception: Table 'skincare_store.user' doesn't exist in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehu...')
+#13 {main}
+CRITICAL - 2024-03-16 19:52:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 19:52:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'skincare_store.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-16 19:52:47 --> [Caused by] mysqli_sql_exception: Table 'skincare_store.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
