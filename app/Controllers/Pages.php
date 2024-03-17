@@ -9,8 +9,14 @@ class Pages extends BaseController
         $data=[
             'title'=>'home|webagungdumadi'
         ];
+<<<<<<< HEAD
         echo view('pages/Home',$data);
     
+=======
+       
+        echo view('pages/Home', $data);
+   
+>>>>>>> 7a3d5e6f078549e5b07b22714f93ca93622f45c5
     }
     public function about(){
         $data=[
@@ -19,5 +25,9 @@ class Pages extends BaseController
         echo view('pages/about',$data);
 
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 7a3d5e6f078549e5b07b22714f93ca93622f45c5
 }

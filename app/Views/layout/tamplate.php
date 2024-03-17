@@ -181,7 +181,7 @@
                             <div class="widget-item">
                                 <div class="widget-about">
                                     <a class="widget-logo" href="index.html">
-                                        <img src="/assets/images/logo.webp" width="95" height="68" alt="Logo">
+                                        <img src="/assets/images/msglow_large.png" width="120" height="80" alt="Logo">
                                     </a>
                                     <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                                 </div>
@@ -191,11 +191,9 @@
                             <div class="widget-item">
                                 <h4 class="widget-title">Information</h4>
                                 <ul class="widget-nav">
-                                    <li><a href="blog.html">Blog</a></li>
                                     <li><a href="about-us.html">About us</a></li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="faq.html">Privacy</a></li>
-                                    <li><a href="account-login.html">Login</a></li>
+                                    <li><a href="login.php">Login</a></li>
                                     <li><a href="product.html">Shop</a></li>
                                     <li><a href="my-account.html">My Account</a></li>
                                     <li><a href="faq.html">FAQs</a></li>
