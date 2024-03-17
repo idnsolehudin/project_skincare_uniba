@@ -20,7 +20,7 @@
                                 <ul class="widget-nav">
                                     <li><a href="about-us.html">About us</a></li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="account-login.html">Login</a></li>
+                                    <li><a href="login.php">Login</a></li>
                                     <li><a href="product.html">Shop</a></li>
                                     <li><a href="my-account.html">My Account</a></li>
                                     <li><a href="faq.html">FAQs</a></li>

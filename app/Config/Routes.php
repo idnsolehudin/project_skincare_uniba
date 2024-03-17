@@ -12,3 +12,5 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'pages::index');
 
+
+
