@@ -11,4 +11,5 @@ $routes->setTranslateURIDashes(true);
 use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'pages::index');
+$routes->get('login', 'auth::login');
 

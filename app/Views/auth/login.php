@@ -38,7 +38,7 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <a href="/pages/index" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
                             
@@ -48,7 +48,7 @@
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="/pages/registrasi">Create an Account!</a>
+                                        <a class="small" href="/auth/registrasi">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>

@@ -1,5 +1,7 @@
 
+  <?=$this->extend('layout/tamplate'); ?>
 
+     <?=$this->Section('content'); ?>
 
         <main class="main-content">
             <!--== Start Hero Area Wrapper ==-->
@@ -717,3 +719,5 @@
             <!--== End News Letter Area Wrapper ==-->
 
         </main>
+
+        <?=$this->endsection(); ?>

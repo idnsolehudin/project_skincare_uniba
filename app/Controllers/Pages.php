@@ -9,35 +9,15 @@ class Pages extends BaseController
         $data=[
             'title'=>'home|webagungdumadi'
         ];
-        echo view('layout/header',$data);
-        echo view('pages/Home');
-        echo view('layout/foother');
+        echo view('pages/Home',$data);
+    
     }
     public function about(){
         $data=[
             'title'=>'about'
         ];
-        echo view('layout/header',$data);
-        echo view ('pages/about');
-        echo view('layout/foother');
-    }
-    public function login()
-    {
-        $data=[
-            'title'=>'login',
-            'favicon'=>'/assets/images/msglow_large.png'
-        ];
-        echo view('auth/login',$data);
-    }
+        echo view('pages/about',$data);
 
-    public function registrasi()
-    {
-        $data=[
-            'title'=>'registrasi',
-            'favicon'=>'/assets/images/msglow_large.png'
-        ];
-        return view('auth/register',$data); 
     }
-
-
+    
 }
