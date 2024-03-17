@@ -1,9 +1,4 @@
 
-  <?=$this->extend('layout/tamplate'); ?>
-
-<<<<<<< HEAD
-     <?=$this->Section('content'); ?>
-=======
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
@@ -139,7 +134,7 @@
     </div>
 </header>
 <!--== End Header Wrapper ==-->
->>>>>>> 7a3d5e6f078549e5b07b22714f93ca93622f45c5
+
 
         <main class="main-content">
             <!--== Start Hero Area Wrapper ==-->
@@ -857,10 +852,7 @@
             <!--== End News Letter Area Wrapper ==-->
 
         </main>
-<<<<<<< HEAD
 
-        <?=$this->endsection(); ?>
-=======
          <!--== Start Footer Area Wrapper ==-->
  <footer class="footer-area">
             <!--== Start Footer Main ==-->
