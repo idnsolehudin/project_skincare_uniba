@@ -30,9 +30,6 @@ class Pages extends BaseController
         echo view('auth/login',$data);
     }
 
-<<<<<<< HEAD
-    
-=======
     public function registrasi()
     {
         $data=[
@@ -41,7 +38,5 @@ class Pages extends BaseController
         ];
         return view('auth/register',$data); 
     }
-
->>>>>>> c1005f8bb40b9c176e37bd39efa9a7fc33422fb5
 
 }
