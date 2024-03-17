@@ -1,0 +1,26 @@
+CRITICAL - 2024-03-17 07:30:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/foother.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/foother.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/foother', [], true)
+ 3 APPPATH\Controllers\Pages.php(22): view('layout/foother')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->about()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 07:59:08 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+in APPPATH\Config\Routes.php on line 14.
+ 1 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-03-17 07:59:20 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+in APPPATH\Config\Routes.php on line 14.
+ 1 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-03-17 07:59:34 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+in APPPATH\Config\Routes.php on line 14.
+ 1 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-03-17 08:00:50 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+in APPPATH\Config\Routes.php on line 14.
+ 1 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
