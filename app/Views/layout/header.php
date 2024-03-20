@@ -45,7 +45,7 @@
         <div class="row align-items-center">
             <div class="col-5 col-sm-6 col-lg-3">
                 <div class="header-logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img class="logo-main" src="/assets/images/logo.png" width="200" height="120" alt="Logo" />
                     </a>
                 </div>
@@ -55,8 +55,8 @@
                     <ul class="main-nav justify-content-start">
                         <li class="has-submenu"><a href="/">home</a>
                             <ul class="submenu-nav">
-                                <li><a href="index.html">Home One</a></li>
-                                <li><a href="index-two.html">Home Two</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                
                             </ul>
                         </li>
                         <li><a href="/pages/about">about</a></li>
@@ -100,10 +100,10 @@
                                 <li><a href="blog-details.html">Blog Details</a></li>
                             </ul>
                         </li>
-                        <li class="has-submenu"><a href="account-login.html">Pages</a>
+                        <li class="has-submenu"><a href="pages/login">Pages</a>
                             <ul class="submenu-nav">
-                                <li><a href="account-login.html">My Account</a></li>
-                                <li><a href="faq.html">Frequently Questions</a></li>
+                                <li><a href="pages/login">Login</a></li>
+                                <li><a href="pages/registrasi">Registrasi</a></li>
                                 <li><a href="page-not-found.html">Page Not Found</a></li>
                             </ul>
                         </li>
@@ -141,7 +141,12 @@
         </span>
                     </button>
 
-                    <a class="header-action-btn" href="account-login.html">
+<<<<<<< HEAD
+                    <a class="header-action-btn" href="/views/auth/login.php">
+=======
+                    <a class="header-action-btn" href="pages/login">
+                        
+>>>>>>> b1649c335730ebdd8f387d76e78081ef0b015ada
                         <span class="icon">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect class="icon-rect" width="30" height="30" fill="url(#pattern3)"/>

@@ -7,19 +7,19 @@ class Pages extends BaseController
     public function index()
     {   
         $data=[
-            'title'=>'home|webagungdumadi'
+            'title'=>'home|webskincare'
         ];
-        echo view('layout/header',$data);
-        echo view('pages/Home');
-        echo view('layout/foother');
+
+        echo view('pages/Home',$data);
+    
     }
     public function about(){
         $data=[
             'title'=>'about'
         ];
-        echo view('layout/header',$data);
-        echo view ('pages/about');
-        echo view('layout/foother');
+        echo view('pages/about',$data);
+
     }
+
 
 }
