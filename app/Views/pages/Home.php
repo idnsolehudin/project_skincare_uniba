@@ -329,7 +329,7 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Luminos Glowing Serum</a></h4>
                                     <div class="prices">
-                                        <span class="price">$210.00</span>
+                                        <span class="price">Rp 210.00</span>
                                         <span class="price-old">300.00</span>
                                     </div>
                                     <div class="product-action">
