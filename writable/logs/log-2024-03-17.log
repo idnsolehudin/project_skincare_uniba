@@ -327,3 +327,70 @@ FROM `user`', [], false)
  9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-17 14:28:13 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'skincare_store', 3306, '', 0)
+#1 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ASUS\Desktop\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ASUS\Desktop\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#8 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#9 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ASUS\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ASUS\\D...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\ASUS\Desktop\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\ASUS\Desktop\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#7 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#8 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ASUS\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ASUS\\D...')
+#12 {main}
+CRITICAL - 2024-03-17 14:28:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ASUS\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 14:43:11 --> ParseError: syntax error, unexpected identifier "ms", expecting "," or ";"
+in APPPATH\Views\pages\about.php on line 13.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/about', [], true)
+ 3 APPPATH\Controllers\Pages.php(20): view('pages/about', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->about()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ASUS\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 14:43:15 --> ParseError: syntax error, unexpected identifier "ms", expecting "," or ";"
+in APPPATH\Views\pages\about.php on line 13.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/about', [], true)
+ 3 APPPATH\Controllers\Pages.php(20): view('pages/about', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->about()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ASUS\\Desktop\\project_skincare_uniba\\public\\index.php')

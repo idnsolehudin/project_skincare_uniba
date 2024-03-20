@@ -464,8 +464,8 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Luminos Glowing Serum</a></h4>
                                     <div class="prices">
-                                        <span class="price">Rp. 150.000</span>
-                                        
+                                        <span class="price">$210.00</span>
+                                        <span class="price-old">300.00</span>
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
