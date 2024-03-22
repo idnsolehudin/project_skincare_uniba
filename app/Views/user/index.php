@@ -13,7 +13,7 @@
                 <thead>
                     <tr>
                         
-                   <td colspan="2">Data User</td>
+                   <td colspan="2">Data Pengguna</td>
                     </tr>
                 </thead>
                 <tbody>
