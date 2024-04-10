@@ -17,10 +17,10 @@ class Produk extends BaseController
 
         $data = [
             'title' => 'List Produk',
-            'produk' => $this->produkModel->getProduk()
+            // 'produk' => $this->produkModel->getProduk()
         ];
 
-    return view('produk/index', $data);
+    return view('user/list_product', $data);
     }
 
     public function detail($id) {
