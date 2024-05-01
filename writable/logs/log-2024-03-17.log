@@ -374,3 +374,1589 @@ FROM `user`', [], false)
  9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-17 14:21:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#12 {main}
+CRITICAL - 2024-03-17 14:21:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-17 14:40:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#12 {main}
+CRITICAL - 2024-03-17 14:40:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-17 15:03:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#12 {main}
+CRITICAL - 2024-03-17 15:03:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'skincare_store'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-17 15:16:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-03-17 15:19:28 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-03-17 15:31:49 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\User.php(20): App\Models\UserModel->getUser()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->index()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#12 {main}
+CRITICAL - 2024-03-17 15:31:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'skincare_store'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\UserModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\User.php(20): App\Models\UserModel->getUser()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-17 15:31:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\app\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\app\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#12 {main}
+CRITICAL - 2024-03-17 15:31:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'skincare_store'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ProdukModel.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Produk.php(20): App\Models\ProdukModel->getProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 15:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 15:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 15:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 15:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 15:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-17 16:09:52 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+INFO - 2024-03-17 16:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 16:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 16:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 17:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 17:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 17:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 17:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 17:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 17:55:37 --> Error: Undefined constant "Auth"
+in APPPATH\Views\auth\register.php on line 38.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/register', [], true)
+ 4 APPPATH\Controllers\auth.php(25): view('auth/register', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->registrasi()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 17:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 17:55:45 --> Error: Undefined constant "Auth"
+in APPPATH\Views\auth\register.php on line 38.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/register', [], true)
+ 4 APPPATH\Controllers\auth.php(25): view('auth/register', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->registrasi()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 17:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 17:55:52 --> Error: Undefined constant "Auth"
+in APPPATH\Views\auth\register.php on line 38.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/register', [], true)
+ 4 APPPATH\Controllers\auth.php(25): view('auth/register', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->registrasi()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 17:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 17:59:19 --> Error: Undefined constant "Auth"
+in APPPATH\Views\auth\register.php on line 38.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/register', [], true)
+ 4 APPPATH\Controllers\auth.php(25): view('auth/register', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->registrasi()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 18:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-17 18:00:24 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', Array, NULL, 'username')
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', Array, Array)
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', Array, NULL, 'username')
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', Array, Array)
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#13 {main}
+CRITICAL - 2024-03-17 18:00:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'skincare_store'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', [...], [...])
+ 6 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 7 VENDORPATH\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 18:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 18:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 18:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-17 18:01:37 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', Array, NULL, 'username')
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', Array, Array)
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', Array, NULL, 'username')
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', Array, Array)
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#13 {main}
+CRITICAL - 2024-03-17 18:01:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'skincare_store'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', [...], [...])
+ 6 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 7 VENDORPATH\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-17 18:02:40 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', Array, NULL, 'username')
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', Array, Array)
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', Array, NULL, 'username')
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', Array, Array)
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Admin\Desktop\project_skincare_uniba\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\...')
+#13 {main}
+CRITICAL - 2024-03-17 18:02:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'skincare_store'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung dumadi', 'username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung dumadi', [...], [...])
+ 6 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 7 VENDORPATH\myth\auth\src\Controllers\AuthController.php(154): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): Myth\Auth\Controllers\AuthController->attemptRegister()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 18:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 18:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:08:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Myth\Auth\Views\_massage_block.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Myth\\Auth\\Views\\_massage_block.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Myth\\Auth\\Views\\_massage_block', [], true)
+ 3 APPPATH\Views\auth\login.php(25): view('Myth\\Auth\\Views\\_massage_block')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 7 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 18:08:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Myth\Auth\Views\_massage_block.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Myth\\Auth\\Views\\_massage_block.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Myth\\Auth\\Views\\_massage_block', [], true)
+ 3 APPPATH\Views\auth\login.php(25): view('Myth\\Auth\\Views\\_massage_block')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 7 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 18:08:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Myth\Auth\Views\_massage_block.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Myth\\Auth\\Views\\_massage_block.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Myth\\Auth\\Views\\_massage_block', [], true)
+ 3 APPPATH\Views\auth\login.php(25): view('Myth\\Auth\\Views\\_massage_block')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 7 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 18:08:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Myth\Auth\Views\_massage_block.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Myth\\Auth\\Views\\_massage_block.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Myth\\Auth\\Views\\_massage_block', [], true)
+ 3 APPPATH\Views\auth\login.php(25): view('Myth\\Auth\\Views\\_massage_block')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 7 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 18:09:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Myth\Auth\Views\_massage_block.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Myth\\Auth\\Views\\_massage_block.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Myth\\Auth\\Views\\_massage_block', [], true)
+ 3 APPPATH\Views\auth\login.php(25): view('Myth\\Auth\\Views\\_massage_block')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 7 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 18:09:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Myth\Auth\Views\_massage_block.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Myth\\Auth\\Views\\_massage_block.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Myth\\Auth\\Views\\_massage_block', [], true)
+ 3 APPPATH\Views\auth\login.php(25): view('Myth\\Auth\\Views\\_massage_block')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 7 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 18:10:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Myth\Auth\Views\_massage_block.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Myth\\Auth\\Views\\_massage_block.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Myth\\Auth\\Views\\_massage_block', [], true)
+ 3 APPPATH\Views\auth\login.php(25): view('Myth\\Auth\\Views\\_massage_block')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 7 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 18:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:21 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:22 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:23 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:26 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:27 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:46 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:47 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:48 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:32:48 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 18:35:26 --> ParseError: syntax error, unexpected end of file
+in APPPATH\Views\auth\login.php on line 79.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 18:35:27 --> ParseError: syntax error, unexpected end of file
+in APPPATH\Views\auth\login.php on line 79.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:51:47 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:51:48 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:51:49 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:51:49 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:51:50 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:52:32 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:52:33 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:54:36 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:54:37 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:54:38 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:55:30 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:57:04 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 18:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 18:59:57 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:02:45 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:02:46 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:11:18 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:11:19 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:11:20 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:12:07 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:12:09 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:12:21 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:12:22 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:12:23 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:14:06 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:17:39 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:17:41 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:19:43 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:19:44 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:20:47 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:20:48 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-17 19:22:19 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+INFO - 2024-03-17 19:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:22:22 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 30.
+ 1 APPPATH\Views\auth\login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-03-17 19:23:39 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'skincare_store', 3306, '', 0)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'skincare_store' in C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\Admin\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\Admin\Desktop\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+CRITICAL - 2024-03-17 19:23:42 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:23:43 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:23:44 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:24:35 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:26:16 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:26:19 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:26:25 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:26:31 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:31:18 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 3.
+ 1 APPPATH\Views\auth\login.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:31:19 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 3.
+ 1 APPPATH\Views\auth\login.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:32:38 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 2.
+ 1 APPPATH\Views\auth\login.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:33:04 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 18.
+ 1 APPPATH\Views\auth\login.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:33:05 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 18.
+ 1 APPPATH\Views\auth\login.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:34:29 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 19.
+ 1 APPPATH\Views\auth\login.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:34:30 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 19.
+ 1 APPPATH\Views\auth\login.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:34:30 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 19.
+ 1 APPPATH\Views\auth\login.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:34:30 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 19.
+ 1 APPPATH\Views\auth\login.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:36:50 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:37:14 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:37:15 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:37:32 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 1.
+ 1 APPPATH\Views\auth\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:38:36 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 19.
+ 1 APPPATH\Views\auth\login.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:39:06 --> CSRF token verified.
+INFO - 2024-03-17 19:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:40:58 --> ParseError: syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\auth\login.php on line 38.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-03-17 19:41:00 --> ParseError: syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\auth\login.php on line 38.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\auth.php(15): view('auth/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 19:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:43:26 --> BadMethodCallException: Call to undefined method App\Models\UserModel::getUser
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\User.php(20): CodeIgniter\Model->__call('getUser', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-03-17 19:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 19:43:49 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\register.php on line 1.
+ 1 APPPATH\Views\auth\register.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\register.php', 1)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\app\\Views\\auth\\register.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/register', [], true)
+ 5 APPPATH\Controllers\auth.php(25): view('auth/register', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\auth->registrasi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
