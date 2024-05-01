@@ -10,21 +10,21 @@ class Product extends Migration
     {
         $this->forge->addField([
             'id' => [
-                'type'           => 'INT',
+                'type'           => 'VARCHAR',
                 'constraint'     => 11,
                 'unsigned'       => true,
             ],
-            'product_name' => [
+            'nama_produk' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => 255,
             ],
-            'product_type_id' => [
-                'type' => 'INT',
+            'id_kategori' => [
+                'type' => 'VARCHAR',
                 'constraint' => 11,
             ],
             'slug' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => 255,
                 'null' => true,
             ],
         ]);

@@ -9,13 +9,12 @@ class ProductType extends Migration
     {
         $this->forge->addField([
             'id' => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+                'type'           => 'VARCHAR',
+                'constraint'     => 11
             ],
-            'category' => [
+            'kategori' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => 255,
             ]
         ]);
         $this->forge->addKey('id', true);

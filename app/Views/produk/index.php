@@ -5,7 +5,7 @@
 <!-- page content -->
         
 
-            <div class="clearfix"></div>
+          <div class="clearfix"></div>
 
             <div class="row">
               <div class="col-md-12">
@@ -37,7 +37,20 @@
               </div>
             </div>
           </div>
-        </div>
+
+
+      
+
+          <div class="dropup-center dropup btn-add position-absolute  p-3">
+            <a class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i class="fa-solid fa-plus fa-2xl" style="color: #FFFF;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li id="add-category"><a class="dropdown-item fw-bolder" href="#"> Tambah Kategori Produk </a></li>
+              <li><a class="dropdown-item fw-bolder" href="/dashboard/produk/tambah_produk"> Tambah Item Produk</a></li>
+            </ul>
+          </div>
+    
         <!-- /page content -->
 
 

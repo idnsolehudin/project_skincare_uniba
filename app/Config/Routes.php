@@ -24,4 +24,8 @@ $routes->get('/dashboard/order','Dashboard::order');
 $routes->get('/dashboard/reseller','Dashboard::reseller');
 $routes->get('/dashboard/laporan','Dashboard::laporan');
 $routes->get('/dashboard/keuangan','Dashboard::keuangan');
+$routes->get('/dashboard/produk/tambah_produk','Dashboard::tambahProduk');
+$routes->post('/kategori/save','Produk::tambahKategori');
+
+
 

@@ -9,29 +9,53 @@ class ProductDetail extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id' => [
+            'id_produk' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => 11
+            ],
+            'deskripsi' => [
+                'type'           => 'CHAR',
+                'constraint'     => 255
+            ],
+            'harga' => [
                 'type'           => 'INT',
                 'constraint'     => 11
             ],
-            'product_id' => [
+            'stok' => [
                 'type'           => 'INT',
                 'constraint'     => 11
             ],
-            'product_type_id' => [
-                'type'           => 'INT',
-                'constraint'     => 11
-            ],
-            'qty' => [
-                'type'           => 'INT',
-                'constraint'     => 11
-            ],
-            'price' => [
+            'ukuran' => [
                 'type'           => 'INT',
                 'constraint'     => 11
             ],
             'varian' => [
                 'type'           => 'VARCHAR',
-                'constraint'     => '255'
+                'constraint'     => 255
+            ],
+            'berat' => [
+                'type'           => 'INT',
+                'constraint'     => 11
+            ],
+            'dimensi' => [
+                'type'           => 'INT',
+                'constraint'     => 11
+            ],
+            'gambar' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => 255
+            ],
+            'ulasan' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => 255
+            ],
+            'id_rating' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => 11
+            ],
+            'id_diskon' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => 11
             ],
             'created_at' => [
                 'type'       => 'DATETIME'

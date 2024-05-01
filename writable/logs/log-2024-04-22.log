@@ -1,0 +1,43 @@
+CRITICAL - 2024-04-22 13:26:44 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ProdukModel"
+in SYSTEMPATH\Model.php on line 766.
+ 1 SYSTEMPATH\Model.php(766): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ProdukModel')
+ 2 SYSTEMPATH\BaseModel.php(783): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ProdukModel.php(18): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Produk.php(35): App\Models\ProdukModel->saveKategori([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->tambahKategori()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-04-22 14:50:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED,
+	ADD `nama_produk` VARCHAR(255),
+	ADD `id_kategori` VARCHAR(11),
+	A...' at line 2 in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('ALTER TABLE `pr...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `pr...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `pr...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(757): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `pr...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-04-22-144616_ChangeColumnAtProdukTabel.php(11): CodeIgniter\Database\Forge->addColumn('product', Array)
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\ChangeColumnAtProdukTabel->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-04-22 14:50:54 --> mysqli_sql_exception: Duplicate column name 'slug' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('ALTER TABLE `pr...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `pr...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `pr...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(757): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `pr...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-04-22-144616_ChangeColumnAtProdukTabel.php(11): CodeIgniter\Database\Forge->addColumn('product', Array)
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\ChangeColumnAtProdukTabel->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}

@@ -11,6 +11,7 @@
 
     <!-- Bootstrap -->
     <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -21,6 +22,59 @@
 
     <!-- Custom Theme Style -->
     <link href="/assets/build/css/custom.min.css" rel="stylesheet">
+
+      <style>
+        .btn-add {
+         
+          bottom: 35px;
+          right: 35px;
+          background-color: #944E63;
+          border-radius: 100%;
+        }
+
+        #body {
+          font-family: Arial, sans-serif;
+          background-color: #f7f7f7;
+          margin: 0;
+          padding: 0;
+        }
+        /* .container {
+          max-width: 400px;
+          margin: 50px auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        } */
+        h2 {
+          text-align: center;
+          color: #333;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5cb85c;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #4cae4c;
+        }
+
+      </style>
   </head>
 
   <body class="nav-md">
@@ -52,8 +106,8 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu" >
               <div class="menu_section">
-                <h3>MENU DASHBOARD</h3>
                 <ul class="nav side-menu">
+                  <li><a href="/dashboard/"><span class="m-3"> MENU DASHBOARD </span> </a> </li>
                   <li><a href="/dashboard/produk"><i class="fa-solid fa-clipboard-list"></i><span class="m-3"> Produk </span> </a> </li>
                   <li><a href="/dashboard/transaksi"><i class="fa-solid fa-credit-card"></i> <span class="m-3"> Transaksi </span> </a> </li>
                   <li><a href="/dashboard/customer"><i class="fa-solid fa-people-line"></i> <span class="m-3"> Customer </span> </a> </li>
@@ -132,7 +186,7 @@
         <!-- /top navigation -->
 
         <!-- head page content -->
-        <div class="right_col" role="main">
+        <div class="position-relative right_col " role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
@@ -165,6 +219,7 @@
     <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
    <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- FastClick -->
     <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
@@ -180,5 +235,8 @@
 
     <!-- Custom Theme Scripts -->
     <script src="/assets/build/js/custom.min.js"></script>
+
+    <!-- scripts vanila -->
+    <script src="/assets/main.js"></script>
   </body>
 </html>

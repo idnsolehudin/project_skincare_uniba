@@ -74,4 +74,13 @@ class Dashboard extends BaseController
 
         return view("keuangan/index", $data);
     }
+
+    public function tambahProduk() {
+        $data = [
+            "title" => "Tambah Kategori Produk",
+            "subtitle" => "TAMBAH KATEGORI PRODUK"
+        ];
+
+        return view("produk/tambah", $data);
+    }
 }

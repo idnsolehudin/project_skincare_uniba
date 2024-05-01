@@ -13,6 +13,10 @@ class ProdukModel extends Model {
 
         return $this->where(['id' =>  $id])-> first();
     }
+
+    public function saveKategori($data) {
+        return $this->insert($data);
+    }
 }
 
 ?>

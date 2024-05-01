@@ -30,6 +30,16 @@ class Produk extends BaseController
         ];
     return view('produk/detail', $data);
     }
+
+    public function tambahKategori() {
+        $this->produkModel->saveKategori([
+            'id' => $this->request->getVar('id'),
+            'category' => $this->request->getVar('kategori')
+        ]);
+
+        session()->setFlashdata('pesan', 'kategori berhasil ditambahkan.....');
+
+    }
 }
 
 ?>
