@@ -9,7 +9,6 @@
         <div class="col">
 
 
-
         <div class="text-center">
             <h1>About MS GLOW</h1></div>
             <br>

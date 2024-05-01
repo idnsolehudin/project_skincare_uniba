@@ -327,6 +327,7 @@ FROM `user`', [], false)
  9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admin\\Desktop\\project_skincare_uniba\\public\\index.php')
+
 ERROR - 2024-03-17 14:28:13 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
 Stack trace:
 #0 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'skincare_store', 3306, '', 0)
@@ -360,6 +361,7 @@ Stack trace:
 #11 C:\Users\ASUS\Desktop\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ASUS\\D...')
 #12 {main}
 CRITICAL - 2024-03-17 14:28:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+
 Main connection [MySQLi]: No connection could be made because the target machine actively refused it
 in SYSTEMPATH\Database\BaseConnection.php on line 428.
  1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
@@ -373,6 +375,7 @@ FROM `user`', [], false)
  8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
  9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ASUS\\Desktop\\project_skincare_uniba\\public\\index.php')
 CRITICAL - 2024-03-17 14:43:11 --> ParseError: syntax error, unexpected identifier "ms", expecting "," or ";"
 in APPPATH\Views\pages\about.php on line 13.
@@ -394,3 +397,4 @@ in APPPATH\Views\pages\about.php on line 13.
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ASUS\\Desktop\\project_skincare_uniba\\public\\index.php')
+
