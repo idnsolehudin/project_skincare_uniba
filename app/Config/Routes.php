@@ -26,6 +26,7 @@ $routes->get('/dashboard/laporan','Dashboard::laporan');
 $routes->get('/dashboard/keuangan','Dashboard::keuangan');
 $routes->get('/dashboard/produk/tambah_produk','Dashboard::tambahProduk');
 $routes->post('/kategori/save','Produk::tambahKategori');
+$routes->post('/produk/tambah_kategori','Produk::tambahKategori');
 
 
 

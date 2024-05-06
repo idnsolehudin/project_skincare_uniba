@@ -13,6 +13,7 @@ class User extends BaseController
     // }
 
     public function index() {
+      
         // $user = $this->userModel->findAll();
 
         $data=[

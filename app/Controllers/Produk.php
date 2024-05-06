@@ -32,13 +32,25 @@ class Produk extends BaseController
     }
 
     public function tambahKategori() {
+        function getId() {
+            $timestamp = time();
+
+            $date = date("d", $timestamp);
+            $month = date("m", $timestamp);
+            $second = date("s", $timestamp);
+
+            return $date . $month . $second;
+        }
+
+        $id = getId();
+
         $this->produkModel->saveKategori([
-            'id' => $this->request->getVar('id'),
+            'id' => $id,
             'category' => $this->request->getVar('kategori')
         ]);
 
-        session()->setFlashdata('pesan', 'kategori berhasil ditambahkan.....');
-
+        // session()->setFlashdata('pesan', 'kategori berhasil ditambahkan.....');
+        return redirect()->to('/dashboard/produk');
     }
 }
 
