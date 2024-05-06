@@ -24,6 +24,12 @@
     <link href="/assets/build/css/custom.min.css" rel="stylesheet">
 
       <style>
+        .add-ctg {
+          position: absolute;
+          top: 20%;
+          left: 35%;
+        }
+        
         .btn-add {
          
           bottom: 35px;
@@ -79,7 +85,7 @@
 
   <body class="nav-md">
 
-  <div class="container body bg-dasboard">
+  <div class="container body bg-dasboard position-relative">
       <div class="main_container bg-dasboard">
         <div class="col-md-3 left_col bg-dasboard" >
           <div class="left_col scroll-view bg-dasboard" >
@@ -206,7 +212,7 @@
             </div>
 
 
-  <?= $this->renderSection('dashboard'); ?>
+            <?= $this->renderSection('dashboard'); ?>
 
 
   

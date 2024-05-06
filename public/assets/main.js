@@ -1,23 +1,34 @@
 document.getElementById("add-category").addEventListener("click", addCattegory);
+let addCtg = document.getElementById("form-add-ctg");
+let close = document.getElementById("btn-close").addEventListener("click", closeBox);
+let inputctg = document.getElementById("input-ctg");
+let btnSave = document.getElementById("btn-simpan").addEventListener("click",closeBoxx);
+let textBerhasil = document.getElementById("text-berhasil");
 
 function addCattegory() {
-    var id = prompt("Masukkan ID Baru :");
-    var kategori = prompt("Masukkan Kategori Baru :");
- 
+addCtg.classList.remove('d-none');
+addCtg.classList.add('d-block');
+inputctg.value = '';
 
-    // Kirim data ke process.php menggunakan AJAX
-    var xhr = new XMLHttpRequest();
-    var url = "/kategori/save";
-    var params = "id=" + id + "&kategori=" + kategori ;
-    xhr.open("POST", url, true);
+};
 
-    // Add the required HTTP header for form data POST requests
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+function closeBox (){
+    addCtg.classList.remove('d-block');
+    addCtg.classList.add('d-none');
+}
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            alert(xhr.responseText);
-        }
+function closeBoxx() {
+    if (inputctg.value == '' || inputctg.value == ' ' || inputctg.value == '  ' || inputctg.value == '   ' ) {
+        alert("masukan kategori terlebih dahulu");
+    } else {
+        closeBox();    
+        textBerhasil.style.display = 'block';
+        textBerhasil.textContent = "berhasil memasukkan kategori " + inputctg.value;
+
+
     }
-    xhr.send(params);
+ setTimeout(function() {
+        textBerhasil.style.display = 'none';
+      }, 3000);
+
 }
