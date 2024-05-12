@@ -3,13 +3,11 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ProdukModel extends Model {
-    protected $table = 'product_categories';
+class ProdukModelView extends Model {
+    protected $table = 'products';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['id','category_name'];
     protected $useTimestamps = true;
-
-    
+    // protected $allowedFields = ['id','category_name'];
 
     // public function getProduk($id = false) {
     //     if ($id == false) {
@@ -23,8 +21,6 @@ class ProdukModel extends Model {
     public function saveKategori($data) {
         return $this->insert($data);
     }
-
-  
 }
 
 ?>

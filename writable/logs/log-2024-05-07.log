@@ -1,0 +1,234 @@
+INFO - 2024-05-07 03:26:41 --> CSRF token verified.
+ERROR - 2024-05-07 03:26:45 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_msglow', 3306, '', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ProdukModel.php(21): CodeIgniter\Model->insert(Array)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ProdukModel.php(21): CodeIgniter\Model->insert(Array)
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori(Array)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#15 {main}
+CRITICAL - 2024-05-07 03:26:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: produk/tambah_kategori]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products_category` (`id`, `category`) VALUES (:id:, :category:)', [...], false)
+ 3 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Models\ProdukModel.php(21): CodeIgniter\Model->insert([...])
+ 7 APPPATH\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-07 03:27:11 --> CSRF token verified.
+ERROR - 2024-05-07 03:27:11 --> mysqli_sql_exception: Table 'db_msglow.products_category' doesn't exist in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ProdukModel.php(21): CodeIgniter\Model->insert(Array)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#16 {main}
+CRITICAL - 2024-05-07 03:27:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_msglow.products_category' doesn't exist
+[Method: POST, Route: produk/tambah_kategori]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products_category` (`id`, `category`) VALUES (:id:, :category:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\ProdukModel.php(21): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-07 03:27:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_msglow.products_category' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `products_category` (`id`, `category`) VALUES (\'070511\', \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `products_category` (`id`, `category`) VALUES (\'070511\', \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products_category` (`id`, `category`) VALUES (:id:, :category:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\ProdukModel.php(21): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-07 03:27:11 --> [Caused by] mysqli_sql_exception: Table 'db_msglow.products_category' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `products_category` (`id`, `category`) VALUES (\'070511\', \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `products_category` (`id`, `category`) VALUES (\'070511\', \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `products_category` (`id`, `category`) VALUES (\'070511\', \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products_category` (`id`, `category`) VALUES (:id:, :category:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ProdukModel.php(21): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-07 03:30:45 --> CSRF token verified.
+INFO - 2024-05-07 03:51:17 --> CSRF token verified.
+INFO - 2024-05-07 03:52:43 --> CSRF token verified.
+INFO - 2024-05-07 03:53:12 --> CSRF token verified.
+INFO - 2024-05-07 04:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-07 04:27:02 --> Error: Call to undefined method CodeIgniter\Session\Session::getFieldData()
+[Method: GET, Route: dashboard/produk]
+in APPPATH\Views\produk\index.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('produk/index', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(21): view('produk/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->produk()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-07 04:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 04:27:43 --> CSRF token verified.
+ERROR - 2024-05-07 04:27:43 --> mysqli_sql_exception: Duplicate entry '70543' for key 'PRIMARY' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ProdukModel.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#16 {main}
+CRITICAL - 2024-05-07 04:27:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '70543' for key 'PRIMARY'
+[Method: POST, Route: produk/tambah_kategori]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES (:id:, :category_name:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\ProdukModel.php(22): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-07 04:27:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '70543' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES (\'070543\', \'mask\', \'2024-05-07 04:27:43\', \'2024-05-07 04:27:43\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES (\'070543\', \'mask\', \'2024-05-07 04:27:43\', \'2024-05-07 04:27:43\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES (:id:, :category_name:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\ProdukModel.php(22): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-07 04:27:43 --> [Caused by] mysqli_sql_exception: Duplicate entry '70543' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES (\'070543\', \'mask\', \'2024-05-07 04:27:43\', \'2024-05-07 04:27:43\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES (\'070543\', \'mask\', \'2024-05-07 04:27:43\', \'2024-05-07 04:27:43\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES (\'070543\', \'mask\', \'2024-05-07 04:27:43\', \'2024-05-07 04:27:43\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES (:id:, :category_name:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ProdukModel.php(22): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Produk.php(47): App\Models\ProdukModel->saveKategori([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->tambahKategori()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-07 04:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 04:27:54 --> CSRF token verified.
+INFO - 2024-05-07 04:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 04:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 04:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 04:33:39 --> CSRF token verified.
+INFO - 2024-05-07 04:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 04:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 05:15:32 --> CSRF token verified.
+INFO - 2024-05-07 05:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 05:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 05:16:47 --> CSRF token verified.
+INFO - 2024-05-07 05:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 05:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 05:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

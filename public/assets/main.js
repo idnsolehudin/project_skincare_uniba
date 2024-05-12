@@ -23,8 +23,8 @@ function closeBoxx() {
     } else {
         closeBox();    
         textBerhasil.style.display = 'block';
-        textBerhasil.textContent = "berhasil memasukkan kategori " + inputctg.value;
-
+        // textBerhasil.textContent = "berhasil memasukkan kategori " + inputctg.value;
+        
 
     }
  setTimeout(function() {

@@ -14,10 +14,10 @@ $routes->get('/', 'pages::index');
 $routes->get('login', 'auth::login');
 
 // $routes->get('/user/(:segment)', 'User::index/$1');
-$routes->get('/produk/index','Produk::index');
+// $routes->get('/produk/index','');
 $routes->get('/produk/detail','Produk::detail');
 $routes->get('/user/dashboard','Dashboard::index');
-$routes->get('/dashboard/produk','Dashboard::produk');
+$routes->get('/dashboard/produk','ProdukKategori::index');
 $routes->get('/dashboard/transaksi','Dashboard::transaksi');
 $routes->get('/dashboard/customer','Dashboard::customer');
 $routes->get('/dashboard/order','Dashboard::order');

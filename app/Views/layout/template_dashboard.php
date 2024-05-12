@@ -22,6 +22,9 @@
 
     <!-- Custom Theme Style -->
     <link href="/assets/build/css/custom.min.css" rel="stylesheet">
+    
+    <!-- animate css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
       <style>
         .add-ctg {

@@ -1,6 +1,7 @@
 <?php 
 namespace App\Controllers;
 
+// use App\Models\ProdukModelView;
 use App\Models\ProdukModel;
 
 class Produk extends BaseController 
@@ -10,26 +11,31 @@ class Produk extends BaseController
 
     public function __construct()
     {
+    //  $this->produkModel = new ProdukModelView();   
      $this->produkModel = new ProdukModel();   
     }
-    public function index() {
+    // public function index() {
         
 
-        $data = [
-            'title' => 'List Produk',
-            // 'produk' => $this->produkModel->getProduk()
-        ];
+    //     $data = [
+    //         'title' => 'List Produk',
+    //         'subtitle' => "LIST PRODUK",
+    //         // 'produk' => $this->produkModel->getProduk()
+    //         'produk' => $this->produkModel->joinData()
+    //     ];
 
-    return view('user/list_product', $data);
-    }
+    // return view('produk/index', $data);
+    // }
 
-    public function detail($id) {
-        $data = [
-            'title' => 'Produk Detail',
-            'produk' => $this->produkModel->getProduk($id)
-        ];
-    return view('produk/detail', $data);
-    }
+    // public function detail($id) {
+    //     $data = [
+    //         'title' => 'Produk Detail',
+    //         'subtitle' => "LIST PRODUK",
+    //         // 'produk' => $this->produkModel->getProduk($id)
+    //         'produk' => $this->produkModel->getData($id)
+    //     ];
+    // return view('produk/detail', $data);
+    // }
 
     public function tambahKategori() {
         function getId() {
@@ -44,12 +50,15 @@ class Produk extends BaseController
 
         $id = getId();
 
-        $this->produkModel->saveKategori([
-            'id' => $id,
-            'category' => $this->request->getVar('kategori')
-        ]);
+       
+            $this->produkModel->saveKategori([
+                'id' => $id,
+                'category_name' => $this->request->getVar('ktg_produk')
+            ]);
 
-        // session()->setFlashdata('pesan', 'kategori berhasil ditambahkan.....');
+    
+
+        session()->setFlashdata('pesan', 'kategori berhasil ditambahkan.....');
         return redirect()->to('/dashboard/produk');
     }
 }
