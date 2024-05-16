@@ -1,5 +1,6 @@
 <?php  
 namespace App\Controllers;
+use App\Models\ModelBuilder;
 
 class Dashboard extends BaseController
 {
@@ -76,9 +77,12 @@ class Dashboard extends BaseController
     }
 
     public function tambahProduk() {
+        $produkModel = new ModelBuilder();
+
         $data = [
-            "title" => "Tambah Kategori Produk",
-            "subtitle" => "TAMBAH KATEGORI PRODUK"
+            "title" => "Tambah Produk",
+            "subtitle" => "TAMBAH PRODUK",
+            "kategori" => $produkModel->getKategori()
         ];
 
         return view("produk/tambah", $data);

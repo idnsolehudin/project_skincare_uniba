@@ -50,7 +50,7 @@
                             <div class="mask">
                               <p><?= $item->id; ?></p>
                               <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-eye"></i></a>
+                                <a href="/detail/<?= $item->slug; ?>"><i class="fa fa-eye"></i></a>
                                 <a href="#"><i class="fa fa-pencil"></i></a>
                                 <a href="#"><i class="fa fa-times"></i></a>
                               </div>
@@ -77,7 +77,7 @@
                   <i class="fa-solid fa-plus fa-2xl" id="add-item"></i>
                   </button>
                   <ul class="dropdown-menu" style="background-color: hotpink; opacity: 0.8;">
-                    <li><a class="dropdown-item text-dark fw-bolder" href="#" >TAMBAH PRODUK</a></li>
+                    <li><a class="dropdown-item text-dark fw-bolder" href="/dashboard/produk/tambah_produk" >TAMBAH PRODUK</a></li>
                     <li><a class="dropdown-item text-dark fw-bolder" href="#" id="add-category">TAMBAH KATEGORI</a></li>
                   </ul>
               </div>  

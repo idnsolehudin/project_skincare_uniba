@@ -27,6 +27,9 @@ $routes->get('/dashboard/keuangan','Dashboard::keuangan');
 $routes->get('/dashboard/produk/tambah_produk','Dashboard::tambahProduk');
 $routes->post('/kategori/save','Produk::tambahKategori');
 $routes->post('/produk/tambah_kategori','Produk::tambahKategori');
+$routes->post('/submit-form','TambahProduk::submit');
+$routes->get('/detail/(:segment)', 'ProdukKategori::detail/$1');
+
 
 
 

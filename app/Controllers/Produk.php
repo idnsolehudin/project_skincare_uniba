@@ -39,7 +39,7 @@ class Produk extends BaseController
 
     public function tambahKategori() {
         function getId() {
-            $timestamp = time();
+            $timestamp = time();    
 
             $date = date("d", $timestamp);
             $month = date("m", $timestamp);

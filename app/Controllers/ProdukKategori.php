@@ -27,9 +27,20 @@ class ProdukKategori extends BaseController
     return view('produk/index', $data);
     }
 
+    public function detail($slug) {
+
+        $data = [
+            'title' => "Detail Produk",
+            'subtitle' => "DETAIL PRODUK",
+            'detail_produk' => $this->produkModel->getDetail($slug)
+        ];
+
+        return view('produk/detail', $data);
+    }
+
     // public function detail($id) {
     //     $data = [
-    //         'title' => 'Produk Detail',
+    //         'title' => 'Produk Detail',  
     //         'subtitle' => "LIST PRODUK",
     //         // 'produk' => $this->produkModel->getProduk($id)
     //         'produk' => $this->produkModel->getData($id)
