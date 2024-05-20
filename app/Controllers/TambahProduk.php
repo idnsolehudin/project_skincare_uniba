@@ -5,22 +5,43 @@ use App\Models\InsertDetailModel;
 use App\models\InsertProdukModel;
 
 class TambahProduk extends BaseController {
-    public function update() {
+
+
+    public function update($id) {
         $produk = new InsertProdukModel();
         $detail = new InsertDetailModel(); 
 
-        function produkId() {
+        $db = \Config\Database::connect();
+        $db->transStart();
+        // function produkId() {
 
-             $timestamp = time();
-             $second = date("s", $timestamp);
+        //      $timestamp = time();
+        //      $second = date("s", $timestamp);
             
-             return $second;
-        }
+        //      return $second;
+        // }
        
-        $id = produkId();
+        // $id = produkId();
 
         $nm_produk = $this->request->getVar("nama");
         $slug = str_replace(' ','-',$nm_produk);
+        
+        $id_detail = $this->request->getVar("id");
+
+        $dataDetail = [
+            'id' => $this->request->getVar("id"),
+            'id_product' => $this->request->getVar("id_produk"),
+            'variant' => $this->request->getVar("varian"),
+            'slug' => $slug,
+            'rating' => $this->request->getVar("rating"),
+            'stock' => $this->request->getVar("stok"),
+            'price' => $this->request->getVar("harga"),
+            'description' => $this->request->getVar("deskripsi")
+        ];
+
+
+
+        $id_produk = $this->request->getVar("id_produk");
 
         $dataProduk = [
             'id' => $this->request->getVar("id_produk"),
@@ -28,19 +49,13 @@ class TambahProduk extends BaseController {
             'product_name' => $this->request->getVar("nama")
         ];
 
-        $dataDetail = [
-            'id' => $this->request->getVar("id"),
-            'id_product' => $this->request->getVar("id_produk"),
-            'variant' => $this->request->getVar("varian"),
-            'slug' => $slug,
-            'stock' => $this->request->getVar("stok"),
-            'price' => $this->request->getVar("harga"),
-            'description' => $this->request->getVar("deskripsi")
-        ];
+        $produk->update($id_produk, $dataProduk);
 
-        $produk->save($dataProduk);
-        $detail->save($dataDetail);
+        $detail->where('id_product', $id)->set($dataDetail)->update();
+       
+        $db->transComplete();
 
+        session()->setFlashdata("pesan", "Data Berhasil Diperbarui..");
         return redirect()->to('/dashboard/produk');
     }
 
@@ -81,7 +96,7 @@ class TambahProduk extends BaseController {
         $produk->insert($dataProduk);
         $detail->insert($dataDetail);
 
-        session()->setFlashdata("pesan", "Data Berhasil DIperbarui..");
+        session()->setFlashdata("pesan", "Data Berhasil Ditambahkan..");
         return redirect()->to('/dashboard/produk');
         
     }
