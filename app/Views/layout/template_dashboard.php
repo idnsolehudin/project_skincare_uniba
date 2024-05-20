@@ -41,6 +41,17 @@
           border-radius: 100%;
         }
 
+        .inpdata {
+          font-size: 20px;
+          box-sizing: border-box;
+          border: none;
+          border-bottom: 2px solid black;
+          width: 100%;
+          background-color: transparent;
+          padding: 0 0;
+          margin-bottom: 20px;
+        }
+
         #body {
           font-family: Arial, sans-serif;
           background-color: #f7f7f7;
@@ -63,13 +74,14 @@
           display: flex;
           flex-direction: column;
         }
-        input[type="text"],
+
         input[type="email"],
         input[type="password"] {
           padding: 10px;
           margin-bottom: 15px;
           border: 1px solid #ddd;
           border-radius: 4px;
+          
         }
         button {
           padding: 10px;
@@ -82,6 +94,8 @@
         button:hover {
           background-color: #4cae4c;
         }
+
+     
 
       </style>
   </head>

@@ -50,9 +50,21 @@
                             <div class="mask">
                               <p><?= $item->id; ?></p>
                               <div class="tools tools-bottom">
+                                <!-- icon lihat detail  -->
                                 <a href="/detail/<?= $item->slug; ?>"><i class="fa fa-eye"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
+
+                                <!-- icon edit  -->
+                          
+                                <a href="/produk/update/<?= $item->slug; ?>"><i class="fa fa-pencil"></i></a>
+
+                                <!-- icon hapus  -->
+                                <form action="/produk/<?= $item->id_product; ?>" method="post" class="d-inline">
+                                  <?= csrf_field(); ?>
+                                  <input type="hidden" name="_method" value="DELETE">
+                                  <!-- <a type="submit" href="#" class="btn  btn-danger"></a> -->
+                                  <button type="submit" style="background: transparent;" id="btn-hapus" onclick="return confirm('apakah anda yakin ingin menghapus produk?')"><i class="fa fa-times"></i></button>
+                                </form>
+                                
                               </div>
                             </div>
                           </div>
@@ -112,6 +124,9 @@
               </div>
             </div>
             <!-- /dialog box input kategori  -->
+
+
+            
           </div>
 
         </div>

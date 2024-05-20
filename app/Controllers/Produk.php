@@ -61,6 +61,12 @@ class Produk extends BaseController
         session()->setFlashdata('pesan', 'kategori berhasil ditambahkan.....');
         return redirect()->to('/dashboard/produk');
     }
+
+    public function hapus($id) {
+        $this->produkModel->delete($id);
+        redirect()->to('/dashboard/produk');
+    }
+
 }
 
 ?>

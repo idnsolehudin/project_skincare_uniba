@@ -37,6 +37,23 @@ class ProdukKategori extends BaseController
 
         return view('produk/detail', $data);
     }
+    public function update($slug) {
+
+        $data = [
+            'title' => "Update Produk",
+            'subtitle' => "UBAH DATA PRODUK",
+            'detail_produk' => $this->produkModel->getDetail($slug)
+        ];
+
+        return view('produk/detail_update', $data);
+    }
+
+    public function hapus($id) {
+       
+        $this->produkModel->delete($id);
+        session()->setFlashdata('pesan',"Hapus Data Berhasil...");
+        return redirect()->to('/dashboard/produk');
+    }
 
     // public function detail($id) {
     //     $data = [

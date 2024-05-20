@@ -21,8 +21,9 @@ class ModelBuilder {
     public function joinData()
     {       
             $builder = $this->db->table("products");
-            $builder->select('products.id, products.product_name, product_details.image, product_details.slug');
+            $builder->select('*');
             $builder->join('product_details','products.id = product_details.id_product');
+
             $query = $builder->get()->getResult();
 
             return $query;  
@@ -38,11 +39,20 @@ class ModelBuilder {
         $builder = $this->db->table("products");
         $builder->select("*");
         $builder->join("product_details", "products.id = product_details.id_product");
+        $builder->join('product_categories',' products.category_id = product_categories.id ');
         $builder->where("product_details.slug", $slug);
         $detail = $builder->get()->getResult();
        
 
         return $detail;
+    }
+
+    public function delete($id) {
+        $builder = $this->db->table("product_details");
+        $builder->where("product_details.id_product", $id);
+        $query = $builder->delete();
+
+        return $query;
     }
 }
 

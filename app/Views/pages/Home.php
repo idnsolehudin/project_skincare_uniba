@@ -200,6 +200,14 @@
             <section class="section-space">
                 <div class="container">
                     <div class="row">
+                        <div class="col-12">
+                            <div class="section-title">
+                                <h2 class="title">Best Products</h2>
+                                <p class="m-0">Kami memiliki beberapa produk unggulan  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-sm-6 col-lg-4">
                             <!--== Start Product Category Item ==-->
                             <a href="product.html" class="product-banner-item">
@@ -232,18 +240,20 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="section-title">
-                                <h2 class="title">Best Product</h2>
-                                <p class="m-0">Kami memeliki beberapa Rekomendasi beberapa produk  </p>
+                                <h2 class="title">Our Products</h2>
+                                <p class="m-0">Daftar Produk Kami  </p>
                             </div>
                         </div>
                     </div>
                     <div class="row mb-n4 mb-sm-n10 g-3 g-sm-6">
-                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
+                    <?php foreach($produk as $items) : ?>
+                        <div class="col-6 col-lg-3 mb-4 mb-sm-9">
                             <!--== Start Product Item ==-->
+                            
                             <div class="product-item product-st2-item">
                                 <div class="product-thumb">
                                     <a class="d-block" href="product-details.html">
-                                        <img src="/assets/images/shop/msglow2.png" width="370" height="450" alt="Image-HasTech">
+                                        <img src="/assets/produk/<?= $items->image; ?>" width="370" height="450" alt="Image-HasTech">
                                     </a>
                                     <span class="flag-new">new</span>
                                 </div>
@@ -258,14 +268,14 @@
                                         </div>
                                         <div class="reviews">150 reviews</div>
                                     </div>
-                                    <h4 class="title"><a href="product-details.html">Whitening Luminos</a></h4>
+                                    <h4 class="title"><a href="product-details.html"><?= $items->product_name; ?></a></h4>
                                     <div class="prices">
-                                        <span class="price">Rp. 300.000</span>
+                                        <span class="price">Rp <?= number_format($items->price,2,",",".") ; ?></span>
                                 
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
+                                            <span><i class="fa fa-cart-plus fa-2xl" style="font-size: 30px;"></i></span>
                                         </button>
                                         <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
                                             <i class="fa fa-expand"></i>
@@ -287,267 +297,22 @@
                                     </div>
                                 </div>
                             </div>
+                           
                             <!--== End prPduct Item ==-->
                         </div>
-                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
-                            <!--== Start Product Item ==-->
-                            <div class="product-item product-st2-item">
-                                <div class="product-thumb">
-                                    <a class="d-block" href="product-details.html">
-                                        <img src="/assets/images/shop/redjelly.png" width="370" height="450" alt="Image-HasTech">
-                                    </a>
-                                    <span class="flag-new">new</span>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-rating">
-                                        <div class="rating">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                        </div>
-                                        <div class="reviews">150 reviews</div>
-                                    </div>
-                                    <h4 class="title"><a href="product-details.html">Red Jelly</a></h4>
-                                    <div class="prices">
-                                        <span class="price">Rp. 300.000</span>
-                                        <span class="price-old">350.000</span>
-                                    </div>
-                                    <div class="product-action">
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product-action-bottom">
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--== End prPduct Item ==-->
-                        </div>
-                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
-                            <!--== Start Product Item ==-->
-                            <div class="product-item product-st2-item">
-                                <div class="product-thumb">
-                                    <a class="d-block" href="product-details.html">
-                                        <img src="/assets/images/shop/masker_charcoal.png" width="370" height="450" alt="Image-HasTech">
-                                    </a>
-                                    <span class="flag-new">new</span>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-rating">
-                                        <div class="rating">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                        </div>
-                                        <div class="reviews">150 reviews</div>
-                                    </div>
-                                    <h4 class="title"><a href="product-details.html">Charcoal Clay Mask</a></h4>
-                                    <div class="prices">
-                                        <span class="price">Rp. 150.000</span>
-                                        
-                                    </div>
-                                    <div class="product-action">
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product-action-bottom">
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--== End prPduct Item ==-->
-                        </div>
-                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
-                            <!--== Start Product Item ==-->
-                            <div class="product-item product-st2-item">
-                                <div class="product-thumb">
-                                    <a class="d-block" href="product-details.html">
-                                        <img src="/assets/images/shop/nightcream.jpg" width="370" height="450" alt="Image-HasTech">
-                                    </a>
-                                    <span class="flag-new">new</span>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-rating">
-                                        <div class="rating">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                        </div>
-                                        <div class="reviews">150 reviews</div>
-                                    </div>
-                                    <h4 class="title"><a href="product-details.html">Night Cream</a></h4>
-                                    <div class="prices">
-                                        <span class="price">Rp. 85.000</span>
-                                        
-                                    </div>
-                                    <div class="product-action">
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product-action-bottom">
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--== End prPduct Item ==-->
-                        </div>
-                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
-                            <!--== Start Product Item ==-->
-                            <div class="product-item product-st2-item">
-                                <div class="product-thumb">
-                                    <a class="d-block" href="product-details.html">
-                                        <img src="/assets/images/shop/serum_luminousglowing.jpg" width="370" height="450" alt="Image-HasTech">
-                                    </a>
-                                    <span class="flag-new">new</span>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-rating">
-                                        <div class="rating">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                        </div>
-                                        <div class="reviews">150 reviews</div>
-                                    </div>
-                                    <h4 class="title"><a href="product-details.html">Luminos Glowing Serum</a></h4>
-                                    <div class="prices">
-                                        <span class="price">$210.00</span>
-                                        <span class="price-old">300.00</span>
-                                    </div>
-                                    <div class="product-action">
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product-action-bottom">
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--== End prPduct Item ==-->
-                        </div>
-                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
-                            <!--== Start Product Item ==-->
-                            <div class="product-item product-st2-item">
-                                <div class="product-thumb">
-                                    <a class="d-block" href="product-details.html">
-                                        <img src="/assets/images/shop/serum_whiteninglifting.jpg" width="370" height="450" alt="Image-HasTech">
-                                    </a>
-                                    <span class="flag-new">new</span>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-rating">
-                                        <div class="rating">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                        </div>
-                                        <div class="reviews">150 reviews</div>
-                                    </div>
-                                    <h4 class="title"><a href="product-details.html">Whitening Lifting Serum</a></h4>
-                                    <div class="prices">
-                                        <span class="price">Rp. 150.000</span>
-                                        
-                                    </div>
-                                    <div class="product-action">
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product-action-bottom">
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--== End prPduct Item ==-->
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </section>
             <!--== End Product Area Wrapper ==-->
+
+            <!-- button pilihan tampilan  -->
+                <!-- <section class="section-space pt-0">
+                    <div class="container">
+                        <button class="btn btn-danger">tampilkan lebih sedikit</button>
+                    </div>
+                </section> -->
+            <!-- /button pilihan tampilan  -->
 
             <!--== Start Product Banner Area Wrapper ==-->
             <section class="section-space pt-0">
@@ -560,6 +325,7 @@
                 </div>
             </section>
             <!--== End Product Banner Area Wrapper ==-->
+
 
             <!--== Start Product Area Wrapper ==-->
             <section class="section-space pt-0">

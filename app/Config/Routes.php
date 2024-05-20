@@ -29,6 +29,9 @@ $routes->post('/kategori/save','Produk::tambahKategori');
 $routes->post('/produk/tambah_kategori','Produk::tambahKategori');
 $routes->post('/submit-form','TambahProduk::submit');
 $routes->get('/detail/(:segment)', 'ProdukKategori::detail/$1');
+$routes->delete('/produk/(:num)','ProdukKategori::hapus/$1');
+$routes->get('/produk/update/(:segment)','ProdukKategori::update/$1');
+$routes->post('/produk/update/(:segment)','TambahProduk::update/$1');
 
 
 
