@@ -51,3 +51,137 @@ INFO - 2024-05-20 00:19:16 --> CSRF token verified.
 INFO - 2024-05-20 00:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-20 00:19:36 --> CSRF token verified.
 INFO - 2024-05-20 00:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 05:59:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_msglow', 3306, '', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-20 05:59:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`', [], false)
+ 3 APPPATH\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-05-20 06:00:57 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_msglow', 3306, '', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-20 06:00:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`', [], false)
+ 3 APPPATH\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-20 06:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:01:59 --> CSRF token verified.
+INFO - 2024-05-20 06:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:05:05 --> CSRF token verified.
+INFO - 2024-05-20 06:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:15:15 --> CSRF token verified.
+INFO - 2024-05-20 06:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:32:54 --> CSRF token verified.
+CRITICAL - 2024-05-20 06:32:54 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: produk/update/705042]
+in SYSTEMPATH\BaseModel.php on line 1833.
+ 1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(997): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\TambahProduk.php(37): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TambahProduk->update('705042')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TambahProduk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-20 06:34:43 --> CSRF token verified.
+INFO - 2024-05-20 06:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 06:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 07:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 07:04:22 --> CSRF token verified.
+INFO - 2024-05-20 07:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 07:04:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -47,7 +47,7 @@
                         </div>
                         <div>
                           <p class="color-secondary mb-0">Deskripsi :</p>
-                          <textarea name="deskripsi" class="inpdata" id="deskripsi" cols="30" rows="2" value="<?= strtoupper($produk->description) ; ?>" disabled></textarea>
+                          <textarea name="deskripsi" class="inpdata" id="deskripsi" cols="30" rows="2" disabled><?= strtoupper($produk->description) ; ?></textarea>
                        
                         </div>
                         <div>
