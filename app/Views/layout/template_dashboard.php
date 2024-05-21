@@ -261,5 +261,27 @@
 
     <!-- scripts vanila -->
     <script src="/assets/main.js"></script>
+    <script>
+    let label = document.getElementById("img_label");
+    let picture = document.getElementById("img-preview");
+    let input = document.getElementById("image");
+
+    input.addEventListener("change", getImage);
+
+    function getImage() {
+        let file = input.files[0];
+        if (file) {
+            label.textContent = file.name;
+
+            let fileImage = new FileReader();
+            fileImage.readAsDataURL(file);
+
+            fileImage.onload = function(e) {
+                url_picture = 'url('+e.target.result+')';
+                picture.style.backgroundImage = url_picture;
+            }
+        }
+    }
+</script>
   </body>
 </html>
