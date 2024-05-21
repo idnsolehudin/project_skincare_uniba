@@ -83,6 +83,25 @@ class TambahProduk extends BaseController {
             'product_name' => $this->request->getVar("nama")
         ];
 
+        //mengambil file image
+        $fileImage = $this->request->getFile('image');
+
+        //apakah tidak ada gambar yang diupload 
+        if ($fileImage->getError() == 4) {
+            //mengambil gambar default
+            $namaImage = 'picture_icon.jpeg';
+        } else {
+
+            //ambil nama file gambar dan menjadikan nama random
+            $namaImage = $fileImage->getRandomName();
+    
+            //memindahkan file ke folder image produk
+            $fileImage->move('assets/produk',$namaImage);
+        }
+
+
+     
+
         $dataDetail = [
             'id' => $dataProduk['id'] . $id,
             'id_product' => $dataProduk['id'],
@@ -90,6 +109,7 @@ class TambahProduk extends BaseController {
             'slug' => $slug,
             'stock' => $this->request->getVar("stok"),
             'price' => $this->request->getVar("harga"),
+            'image' => $namaImage,
             'description' => $this->request->getVar("deskripsi")
         ];
 

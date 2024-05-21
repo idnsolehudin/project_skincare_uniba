@@ -1,4 +1,4 @@
-document.getElementById("add-category").addEventListener("click", addCattegory);
+let addCategory = document.getElementById("add-category").addEventListener("click", addCattegory);
 let addCtg = document.getElementById("form-add-ctg");
 let close = document.getElementById("btn-close").addEventListener("click", closeBox);
 let inputctg = document.getElementById("input-ctg");
@@ -83,5 +83,6 @@ btnHapus.addEventListener("click", function() {
     };
     xhr.send('id=' + encodeURIComponent(itemId));
 };
+
 
 
