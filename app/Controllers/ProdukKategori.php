@@ -21,7 +21,7 @@ class ProdukKategori extends BaseController
             'title' => 'List Produk',
             'subtitle' => "LIST PRODUK",
             // 'produk' => $this->produkModel->getProduk()
-            'produk' => $this->produkModel->joinData()
+            'produk' => $this->produkModel->fullJoin()
         ];
 
     return view('produk/index', $data);
@@ -32,17 +32,30 @@ class ProdukKategori extends BaseController
         $data = [
             'title' => "Detail Produk",
             'subtitle' => "DETAIL PRODUK",
-            'detail_produk' => $this->produkModel->getDetail($slug)
+            'detail_produk' => $this->produkModel->fullJoinDetail($slug)
         ];
 
         return view('produk/detail', $data);
     }
+
+
+    public function detail_home($slug) {
+
+        $data = [
+            'title' => "Detail Produk",
+            'subtitle' => "DETAIL PRODUK",
+            'detail_produk' => $this->produkModel->fullJoinDetail($slug)
+        ];
+
+        return view('pages/home_detail', $data);
+    }
+
     public function update($slug) {
 
         $data = [
             'title' => "Update Produk",
             'subtitle' => "UBAH DATA PRODUK",
-            'detail_produk' => $this->produkModel->getDetail($slug)
+            'detail_produk' => $this->produkModel->fullJoinDetail($slug)
         ];
 
         return view('produk/detail_update', $data);

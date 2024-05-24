@@ -62,10 +62,23 @@
                           <p class="color-secondary mb-0">Stok :</p>
                           <input type="text" class="inpdata" name="stok" id="stok" value="<?= strtoupper($produk->stock) ; ?>" disabled>
                         </div>
+                        <div class="row">
+                          <div class="col-8">
+                            <p class="color-secondary mb-0">Promo :</p>
+                            <input type="text" class="inpdata" name="promo" id="promo" placeholder="Promo" value="<?= strtoupper($produk->discount_name) ; ?>" disabled>
+                          </div>
+                          <div class="col-3">
+                            <p class="color-secondary mb-0">Potongan :</p>
+                            <div class="d-flex">
+                              <input type="number" class="inpdata" name="potongan" id="potongan" placeholder="Potongan" value="<?= strtoupper($produk->discount) ; ?>" disabled>
+                              <p class="fs-4">%</p>
+                            </div>
+                          </div>
                           <br />
 
-                          <div class="">
-                            <div class="product_price d-flex">
+                          <div class="product_price">
+                            <h6>Harga sebelum potongan promo :</h6>
+                            <div class=" d-flex">
                               <div>
                                 <p >Rp </p>
                               </div>
@@ -82,7 +95,7 @@
                             <button type="submit" class="btn  btn-primary" id="btsave" disabled>Simpan</button>
 
 
-                            <form action="/produk/<?= $produk->id_product; ?>" method="post" class="d-inline">
+                            <form action="/produk/<?= $produk->id_product ; ?>" method="post" class="d-inline">
                               <?= csrf_field(); ?>
                               <input type="hidden" name="_method" value="DELETE">
                               <button type="submit" class="btn  btn-danger"  onclick="return confirm('apakah anda yakin ingin menghapus produk?')">Hapus</button>

@@ -31,8 +31,10 @@ $routes->post('/submit-form','TambahProduk::submit');
 $routes->get('/detail/(:segment)', 'ProdukKategori::detail/$1');
 $routes->delete('/produk/(:num)','ProdukKategori::hapus/$1');
 $routes->get('/produk/update/(:segment)','ProdukKategori::update/$1');
+$routes->get('/produk/update/(:segment)','ProdukKategori::index_detail');
 $routes->post('/produk/update/(:segment)','TambahProduk::update/$1');
 
+$routes->get('/produk/detail/checkout/(:segment)', 'ProdukKategori::detail_home/$1');
 
 
 
