@@ -36,7 +36,9 @@ class TambahProduk extends BaseController {
             'rating' => $this->request->getVar("rating"),
             'stock' => $this->request->getVar("stok"),
             'price' => $this->request->getVar("harga"),
-            'description' => $this->request->getVar("deskripsi")
+            'description' => $this->request->getVar("deskripsi"),
+            'discount' => $this->request->getVar("potongan"),
+            'discount_name' => $this->request->getVar("promo")
         ];
 
 

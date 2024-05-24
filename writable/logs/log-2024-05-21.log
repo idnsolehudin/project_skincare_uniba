@@ -90,3 +90,209 @@ INFO - 2024-05-21 08:04:04 --> CSRF token verified.
 INFO - 2024-05-21 08:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 08:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 08:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-21 20:29:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_msglow', 3306, '', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-21 20:29:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`', [], false)
+ 3 APPPATH\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-21 20:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-21 21:40:14 --> TypeError: number_format(): Argument #2 ($decimals) must be of type int, string given
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 273.
+ 1 APPPATH\Views\pages\Home.php(273): number_format('999999', '.')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-21 21:40:21 --> TypeError: number_format(): Argument #2 ($decimals) must be of type int, string given
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 273.
+ 1 APPPATH\Views\pages\Home.php(273): number_format('999999', ',', '.')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-21 21:40:23 --> TypeError: number_format(): Argument #2 ($decimals) must be of type int, string given
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 273.
+ 1 APPPATH\Views\pages\Home.php(273): number_format('999999', ',', '.')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-21 21:47:10 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-21 21:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-21 21:57:14 --> ErrorException: Undefined property: stdClass::$product_categories
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 667.
+ 1 APPPATH\Views\pages\Home.php(667): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_categories', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 667)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-21 21:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-21 21:57:40 --> ErrorException: Undefined property: stdClass::$category_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 667.
+ 1 APPPATH\Views\pages\Home.php(667): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category_name', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 667)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-21 21:59:15 --> ErrorException: Undefined property: stdClass::$category_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 667.
+ 1 APPPATH\Views\pages\Home.php(667): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category_name', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 667)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-21 22:14:53 --> ErrorException: Undefined property: stdClass::$product_details
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 667.
+ 1 APPPATH\Views\pages\Home.php(667): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_details', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 667)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-21 22:15:11 --> ErrorException: Undefined property: stdClass::$product_details
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 667.
+ 1 APPPATH\Views\pages\Home.php(667): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_details', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 667)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-21 22:15:12 --> ErrorException: Undefined property: stdClass::$product_details
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 667.
+ 1 APPPATH\Views\pages\Home.php(667): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_details', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 667)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(17): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-21 22:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

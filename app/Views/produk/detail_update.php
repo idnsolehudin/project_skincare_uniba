@@ -37,6 +37,7 @@
                         <img src="/assets/produk/<?= $produk->image; ?>" alt="..."  class="rounded" style="height: 600px;"/>
                       </div>
                     </div>
+
                     <div class="col-md-5 col-sm-5 " style="border:0px solid #e5e5e5;">
                         <div>
                           <p class="color-secondary mb-0">Kategori :</p>
@@ -44,36 +45,55 @@
                             <option value="<?= $produk->category_id; ?>"><?= strtoupper($produk->category_name) ; ?></option>
                           </select>
                         </div>
+
                         <div>
                           <p class="color-secondary mb-0">Nama Produk :</p>
                           <input type="text" class="inpdata" name="nama" id="nama" value="<?= strtoupper($produk->product_name) ; ?>" >
                         </div>
+                        
                         <div>
                           <p class="color-secondary mb-0">Deskripsi :</p>
                           <textarea name="deskripsi" id="deskripsi" cols="30" rows="2" class="inpdata" name="deskripsi" id="deskripsi"><?= strtoupper($produk->description) ; ?></textarea>
                         </div>
+
                         <div>
                           <p class="color-secondary mb-0">Rating :</p>
                           <input type="number" class="inpdata" name="rating" id="rating" value="<?= strtoupper($produk->rating) ; ?>" >
                         </div>
+
                         <div>
                           <p class="color-secondary mb-0">Varian :</p>
                           <input type="text" class="inpdata" name="varian" id="varian" value="<?= strtoupper($produk->variant) ; ?>" >
                         </div>
+
                         <div>
                           <p class="color-secondary mb-0">Stok :</p>
                           <input type="number" class="inpdata" name="stok" id="stok" value="<?= strtoupper($produk->stock) ; ?>" >
                         </div>
+
+                        <div class="row">
+                          <div class="col-8">
+                            <p class="color-secondary mb-0">Promo :</p>
+                            <input type="text" class="inpdata" name="promo" id="promo" placeholder="Promo" value="<?= strtoupper($produk->discount_name) ; ?>" >
+                          </div>
+                          <div class="col-3">
+                            <p class="color-secondary mb-0">Potongan :</p>
+                            <div class="d-flex">
+                              <input type="number" class="inpdata" name="potongan" id="potongan" placeholder="Potongan" value="<?= strtoupper($produk->discount) ; ?>" >
+                              <p class="fs-4">%</p>
+                            </div>
+                          </div>
+                        </div>
+
+                      
+
                         <div>
-                          
                           <input type="hidden"  name="slug" id="slug" value="<?= strtoupper($produk->slug) ; ?>" >
                         </div>
                         <div>
-                        
                           <input type="hidden"  name="id" id="id" value="<?= $produk->id ; ?>" >
                         </div>
                         <div>
-                          
                           <input type="hidden"  name="id_produk" id="id_produk" value="<?= $produk->id_product ; ?>" >
                         </div>
                           <br />

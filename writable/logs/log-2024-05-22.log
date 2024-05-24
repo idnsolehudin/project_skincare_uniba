@@ -1,0 +1,1300 @@
+ERROR - 2024-05-22 03:20:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_msglow', 3306, '', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 03:20:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`', [], false)
+ 3 APPPATH\Models\ModelBuilder.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Pages.php(14): App\Models\ModelBuilder->joinData()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-22 04:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-22 04:08:12 --> ErrorException: Undefined variable $produk
+[Method: GET, Route: produk/detail/checkout/masker-greentea]
+in APPPATH\Views\pages\home_detail.php on line 8.
+ 1 APPPATH\Views\pages\home_detail.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\home_detail.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\home_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/home_detail', [], true)
+ 5 APPPATH\Controllers\ProdukKategori.php(46): view('pages/home_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('masker-greentea')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:08:40 --> ErrorException: Undefined variable $title
+[Method: GET, Route: produk/detail/checkout/masker-greentea]
+in APPPATH\Views\layout\template.php on line 7.
+ 1 APPPATH\Views\layout\template.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\layout\\template.php', 7)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/home_detail', [], true)
+ 6 APPPATH\Controllers\ProdukKategori.php(46): view('pages/home_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('masker-greentea')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:15:39 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-22 04:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-22 04:16:33 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:21:37 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:21:38 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:21:39 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:21:39 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:21:39 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:21:40 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:21:40 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 04:21:41 --> ErrorException: Undefined variable $detail_produk
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 646.
+ 1 APPPATH\Views\pages\Home.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail_produk', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 646)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-22 04:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-22 05:25:58 --> ErrorException: Attempt to read property "image" on array
+[Method: GET, Route: produk/detail/checkout/NAIL-POLISH-BARU-HASIL-EDIT-Berhasil]
+in APPPATH\Views\pages\home_detail.php on line 21.
+ 1 APPPATH\Views\pages\home_detail.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "image" on array', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\home_detail.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\home_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/home_detail', [], true)
+ 5 APPPATH\Controllers\ProdukKategori.php(48): view('pages/home_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('NAIL-POLISH-BARU-HASIL-EDIT-Berhasil')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 05:56:57 --> ErrorException: Undefined variable $user
+[Method: GET, Route: user]
+in APPPATH\Views\user\index.php on line 20.
+ 1 APPPATH\Views\user\index.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\user\\index.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(26): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-05-22 06:24:05 --> mysqli_sql_exception: Duplicate column name 'discount' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('ALTER TABLE `di...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `di...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `di...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\Forge.php(772): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `di...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Database\Migrations\2024-05-22-061839_UpdateTableStructureDiscounts.php(11): CodeIgniter\Database\Forge->addColumn('discounts', Array)
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\UpdateTableStructureDiscounts->up()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-22 21:19:19 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-re...')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-re...')
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 21:19:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+[Method: GET, Route: produk/detail/checkout/encapsulated-retinol-elixir]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 2 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:19:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 4 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:19:19 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 4 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.*, `product_details`.*, `product_categories`.*, `discounts`.*
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 5 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-05-22 21:21:20 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-re...')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-re...')
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 21:21:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+[Method: GET, Route: produk/detail/checkout/encapsulated-retinol-elixir]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 2 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:21:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 4 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:21:20 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 4 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 5 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-05-22 21:21:21 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-re...')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-re...')
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 21:21:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+[Method: GET, Route: produk/detail/checkout/encapsulated-retinol-elixir]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 2 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:21:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 4 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:21:21 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 4 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 5 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-05-22 21:21:29 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-re...')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-re...')
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 21:21:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+[Method: GET, Route: produk/detail/checkout/encapsulated-retinol-elixir]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 2 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:21:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 4 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:21:29 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 4 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 5 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-05-22 21:25:17 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('pore-away')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('pore-away')
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 21:25:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+[Method: GET, Route: produk/detail/checkout/pore-away]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 2 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('pore-away')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('pore-away')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:25:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'pore-away\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'pore-away\'')
+ 3 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 4 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('pore-away')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('pore-away')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:25:17 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'pore-away\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'pore-away\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'pore-away\'')
+ 4 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 5 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('pore-away')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('pore-away')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-05-22 21:41:52 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-re...')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-re...')
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 21:41:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+[Method: GET, Route: produk/detail/checkout/encapsulated-retinol-elixir]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE slug = ?', [...])
+ 2 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:41:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE slug = \'encapsulated-retinol-elixir\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE slug = \'encapsulated-retinol-elixir\'')
+ 3 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE slug = ?', [...])
+ 4 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:41:52 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE slug = \'encapsulated-retinol-elixir\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE slug = \'encapsulated-retinol-elixir\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE slug = \'encapsulated-retinol-elixir\'')
+ 4 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT *
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE slug = ?', [...])
+ 5 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-05-22 21:47:09 --> mysqli_sql_exception: Unknown column 'product_details.slug' in 'where clause' in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array)
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-re...')
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-re...')
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 21:47:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_details.slug' in 'where clause'
+[Method: GET, Route: produk/detail/checkout/encapsulated-retinol-elixir]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 2 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:47:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_details.slug' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 4 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 21:47:09 --> [Caused by] mysqli_sql_exception: Unknown column 'product_details.slug' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = \'encapsulated-retinol-elixir\'')
+ 4 APPPATH\Models\ModelBuilder.php(71): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined WHERE product_details.slug = ?', [...])
+ 5 APPPATH\Controllers\ProdukKategori.php(45): App\Models\ModelBuilder->fullJoinDetail('encapsulated-retinol-elixir')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->detail_home('encapsulated-retinol-elixir')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-22 21:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 21:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 21:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-22 21:58:42 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 127.
+ 1 APPPATH\Views\pages\Home.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 127)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 22:11:29 --> ErrorException: Undefined variable $detail
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 146.
+ 1 APPPATH\Views\pages\Home.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 146)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 22:11:55 --> ErrorException: Undefined variable $detail
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 147.
+ 1 APPPATH\Views\pages\Home.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 147)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 22:12:14 --> ErrorException: Undefined variable $detail
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 153.
+ 1 APPPATH\Views\pages\Home.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail', 'C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 153)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-22 22:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:22:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-22 22:25:37 --> mysqli_sql_exception: The used SELECT statements have a different number of columns in C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Models\ModelBuilder.php(99): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...')
+#4 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\app\Controllers\ProdukKategori.php(24): App\Models\ModelBuilder->fullJoin()
+#5 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ProdukKategori->index()
+#6 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+#7 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\solehudin1725\Documents\MATERI PERKULIAHAN SMT 6\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehu...')
+#12 {main}
+CRITICAL - 2024-05-22 22:25:37 --> CodeIgniter\Database\Exceptions\DatabaseException: The used SELECT statements have a different number of columns
+[Method: GET, Route: dashboard/produk]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\ModelBuilder.php(99): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `products`.`category_id`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined ')
+ 2 APPPATH\Controllers\ProdukKategori.php(24): App\Models\ModelBuilder->fullJoin()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 22:25:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: The used SELECT statements have a different number of columns
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `products`.`category_id`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `products`.`category_id`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined ')
+ 3 APPPATH\Models\ModelBuilder.php(99): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `products`.`category_id`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined ')
+ 4 APPPATH\Controllers\ProdukKategori.php(24): App\Models\ModelBuilder->fullJoin()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-05-22 22:25:37 --> [Caused by] mysqli_sql_exception: The used SELECT statements have a different number of columns
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `products`.`category_id`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `products`.`category_id`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `products`.`category_id`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined ')
+ 4 APPPATH\Models\ModelBuilder.php(99): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `products`.`product_name`, `product_categories`.`category_name`, `products`.`category_id`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+LEFT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+LEFT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+LEFT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount` UNION SELECT `products`.`product_name`, `product_categories`.`category_name`, `product_details`.*, `discounts`.`discount`, `discounts`.`discount_name`
+FROM `products`
+RIGHT JOIN `product_details` ON `products`.`id` = `product_details`.`id_product`
+RIGHT JOIN `product_categories` ON `products`.`category_id` = `product_categories`.`id`
+RIGHT JOIN `discounts` ON `product_details`.`id_discount` = `discounts`.`id_discount`) as combined ')
+ 5 APPPATH\Controllers\ProdukKategori.php(24): App\Models\ModelBuilder->fullJoin()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdukKategori->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukKategori))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-05-22 22:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 22:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
