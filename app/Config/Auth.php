@@ -73,12 +73,11 @@ class Auth extends \Myth\Auth\Config\Auth
      * @var array
      */
     public $views = [
-        'login'           => 'App\Views\Auth\login',
-        'register'        => 'App\Views\Auth\register',
-        'forgot'          => 'App\Views\Auth\forgot',
-        'reset'           => 'App\Views\Auth\reset',
-        'emailForgot'     => 'App\Views\Auth\emails\forgot',
-        'emailActivation' => 'App\Views\Auth\emails\activation',
+        'login'       => 'Myth\Auth\Views\login',
+        'register'    => 'Myth\Auth\Views\register',
+        'forgot'      => 'Myth\Auth\Views\forgot',
+        'reset'       => 'Myth\Auth\Views\reset',
+        'emailForgot' => 'Myth\Auth\Views\emails\forgot',
     ];
 
     /**

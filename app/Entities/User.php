@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Entities;
+namespace Myth\Auth\Entities;
 
 use CodeIgniter\Entity\Entity;
 use Exception;
+use Myth\Auth\Authorization\GroupModel;
+use Myth\Auth\Authorization\PermissionModel;
 use Myth\Auth\Password;
 use RuntimeException;
 
-class User extends \Myth\Auth\Entities\User
+class User extends Entity
 {
     /**
      * Maps names used in sets and gets against unique
@@ -129,7 +131,7 @@ class User extends \Myth\Auth\Entities\User
     public function generateResetHash()
     {
         $this->attributes['reset_hash']    = bin2hex(random_bytes(16));
-        $this->attributes['reset_expires'] = date('Y-m-d H:i:s', time() + config('Auth')->resetTime);
+    
 
         return $this;
     }

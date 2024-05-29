@@ -1,55 +1,55 @@
-<?=$this->extend('auth/tamplate'); ?>
+<?= $this->extend($config->viewLayout) ?>
+<?= $this->section('main') ?>
 
-<?=$this->Section('content'); ?>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
 
-    <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-xl-10 col-lg-12 col-md-11">
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-5">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
-                            </div>
-                            <form class="user" >
-                            <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputUsername"
-                                        placeholder="USERNAME">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-10 mb-10 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
-                                    </div>
-                                    <div class="col-sm-10 mb-10 mb-sm-3">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
-                                    </div>
-                                </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block "  >
-                                    Register Account
-                                </a>
-                                </form>
-                            <hr>
-                            
-                            <div class="text-center">
-                                <a class="small" href="/auth/login">Already have an account? Login!</a>
-                            </div>
+            <div class="card">
+                <h2 class="card-header"><?=lang('Auth.register')?></h2>
+                <div class="card-body">
+
+                    <?= view('Myth\Auth\Views\_message_block') ?>
+
+                    <form action="<?= url_to('register') ?>" method="post">
+                        <?= csrf_field() ?>
+
+                        <div class="form-group">
+                            <label for="email"><?=lang('Auth.email')?></label>
+                            <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>"
+                                   name="email" aria-describedby="emailHelp" placeholder="<?=lang('Auth.email')?>" value="<?= old('email') ?>">
+                            <small id="emailHelp" class="form-text text-muted"><?=lang('Auth.weNeverShare')?></small>
                         </div>
-                    </div>
+
+                        <div class="form-group">
+                            <label for="username"><?=lang('Auth.username')?></label>
+                            <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password"><?=lang('Auth.password')?></label>
+                            <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>" autocomplete="off">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pass_confirm"><?=lang('Auth.repeatPassword')?></label>
+                            <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.repeatPassword')?>" autocomplete="off">
+                        </div>
+
+                        <br>
+
+                        <button type="submit" class="btn btn-primary btn-block"><?=lang('Auth.register')?></button>
+                    </form>
+
+
+                    <hr>
+
+                    <p><?=lang('Auth.alreadyRegistered')?> <a href="<?= url_to('login') ?>"><?=lang('Auth.signIn')?></a></p>
                 </div>
             </div>
+
         </div>
     </div>
-    </div>
-    </div>
+</div>
 
-<?=$this->endsection(); ?>
+<?= $this->endSection() ?>
