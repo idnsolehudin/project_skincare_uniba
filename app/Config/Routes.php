@@ -1,5 +1,6 @@
 <?php 
 namespace Config;
+namespace Myth\Auth\Config;
 
 $routes=Services::routes();
 
@@ -9,15 +10,15 @@ $routes->setAutoRoute(true);
 $routes->setTranslateURIDashes(true);
 
 use CodeIgniter\Router\RouteCollection;
+use Myth\Auth\Config\Auth as AuthConfig;
 
 $routes->get('/', 'pages::index');
 
 
 // $routes->get('/user/(:segment)', 'User::index/$1');
-$routes->get('/produk/index','Produk::index');
 $routes->get('/produk/detail','Produk::detail');
 $routes->get('/user/dashboard','Dashboard::index');
-$routes->get('/dashboard/produk','Dashboard::produk');
+$routes->get('/dashboard/produk','ProdukKategori::index');
 $routes->get('/dashboard/transaksi','Dashboard::transaksi');
 $routes->get('/dashboard/customer','Dashboard::customer');
 $routes->get('/dashboard/order','Dashboard::order');
@@ -27,10 +28,17 @@ $routes->get('/dashboard/keuangan','Dashboard::keuangan');
 $routes->get('/dashboard/produk/tambah_produk','Dashboard::tambahProduk');
 $routes->post('/kategori/save','Produk::tambahKategori');
 $routes->post('/produk/tambah_kategori','Produk::tambahKategori');
-namespace Myth\Auth\Config;
+$routes->post('/submit-form','TambahProduk::submit');
+$routes->get('/detail/(:segment)', 'ProdukKategori::detail/$1');
+$routes->delete('/produk/(:num)','ProdukKategori::hapus/$1');
+$routes->get('/produk/update/(:segment)','ProdukKategori::update/$1');
+$routes->get('/produk/update/(:segment)','ProdukKategori::index_detail');
+$routes->post('/produk/update/(:segment)','TambahProduk::update/$1');
+$routes->post('/cart/tambah/','Checkout::tambah');
 
-use CodeIgniter\Router\RouteCollection;
-use Myth\Auth\Config\Auth as AuthConfig;
+$routes->get('/produk/detail/checkout/(:segment)', 'ProdukKategori::detail_home/$1');
+
+
 
 /** @var RouteCollection $routes */
 

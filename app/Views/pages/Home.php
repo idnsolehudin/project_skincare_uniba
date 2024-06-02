@@ -165,7 +165,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                 } else {
                                                 ?>
                                                 <p class="m-0 p-0" style="text-decoration: line-through; font-size: 16px; padding: 20px;"><?php echo ("Rp " . number_format($items->price, 0, ',', '.'));?></p>
-                                            <p style="">
+                                            <p>
                                                 <?php 
                                                     $harga = $items->price - ($items->discount/100 * $items->price);
                                                         echo ("Rp " . number_format($harga, 0, ',', '.')) ;

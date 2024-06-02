@@ -27,9 +27,25 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                         <!--== Start Product Info Area ==-->
                                         <div class="product-details-content"> 
                                             <form action="/cart/tambah" method="post">
+                                                <?= csrf_field(); ?>
                                                 <!-- id produk  -->
                                                 <input type="text" name="id_product" id="id_product" value="<?= $detail->id_product; ?>" style="background-color: transparent; border:none;" disabled>
                                                 
+                                                <!-- id user  -->
+                                                <?php 
+                                                function produk() {
+
+                                                    $timestamp = time();
+                                                    $second = date("s", $timestamp);
+                                                   
+                                                    return $second;
+                                               }
+                                              
+                                               $id = produk();
+                                                ?>
+
+                                                <input type="hidden" name="id_user" value="<?= $id; ?>">
+
                                                 <!-- nama produk  -->
                                                 <p class="product-details-title fw-bolder fs-10">[ <?= $detail->category_name; ?> ]  <?= $detail->product_name; ?> | <?= $detail->variant; ?></p>
                                                 
@@ -65,6 +81,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                         }
                                                         ;?>
                                                     </h1>
+                                                    <input type="hidden" name="price" value="<?= $harga; ?>">
                                                 </div>
 
                                                 <!-- deskripsi  -->
@@ -73,7 +90,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                 <!-- jumlah  -->
                                                 <div class="product-details-pro-qty">
                                                     <div class="pro-qty">
-                                                        <input type="text" name="quantity" title="Quantity" value="1" min="1" class="form-control">
+                                                        <input type="text" name="qty" title="Quantity" value="1" min="1" class="form-control">
                                                     </div>  
                                                 </div>
                                                 <div class="product-details-cart-wishlist mt-4 ">
