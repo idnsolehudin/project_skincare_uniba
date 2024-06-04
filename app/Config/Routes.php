@@ -37,7 +37,13 @@ $routes->post('/produk/update/(:segment)','TambahProduk::update/$1');
 $routes->post('/cart/tambah/','Checkout::tambah');
 
 $routes->get('/produk/detail/checkout/(:segment)', 'ProdukKategori::detail_home/$1');
+$routes->post('/invoice','Checkout::invoice');
 
+
+$routes->get('/cek', 'Ongkir::index');
+$routes->get('/ongkir/getProvinces', 'Ongkir::getProvinces');
+$routes->get('/ongkir/getCities/(:num)', 'Ongkir::getCities/$1');
+$routes->post('/ongkir/checkOngkir', 'Ongkir::checkOngkir');
 
 
 /** @var RouteCollection $routes */

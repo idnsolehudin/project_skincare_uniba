@@ -157,8 +157,10 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                         <span class="price m-0 p-0">
                                             <p>
                                                 <?php
+                                                $harga;
                                                 if ($items->discount == null) { 
                                                     echo ("Rp " . number_format($items->price, 0, ',', '.'));
+                                                    $harga = $items->price;
                                                 ?>
                                             </p>
                                                 <?php 

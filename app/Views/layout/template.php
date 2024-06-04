@@ -214,14 +214,19 @@
                         <i class="fa fa-times"></i>
                     </button>
                     <div class="modal-action-messages">
-                        <i class="fa fa-check-square-o"></i> Added to cart successfully!
+                        <i class="fa fa-check-square-o"></i> Berhasil Memasukkan Ke Keranjang
                     </div>
                     <div class="modal-action-product">
                         <div class="thumb">
                             <img src="/assets/images/shop/modal1.webp" alt="Organic Food Juice" width="466" height="320">
                         </div>
-                        <h4 class="product-name"><a href="product-details.html">Readable content DX22</a></h4>
+                        <div class="text-center">
+                            <button type="button" class="btn align-center" data-bs-dismiss="modal">
+                                Oke
+                            </button>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </div>

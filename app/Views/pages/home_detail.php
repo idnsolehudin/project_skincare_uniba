@@ -26,10 +26,10 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                     <div class="col-lg-6">
                                         <!--== Start Product Info Area ==-->
                                         <div class="product-details-content"> 
-                                            <form action="/cart/tambah" method="post">
+                                            <form action="/invoice" method="post">
                                                 <?= csrf_field(); ?>
                                                 <!-- id produk  -->
-                                                <input type="text" name="id_product" id="id_product" value="<?= $detail->id_product; ?>" style="background-color: transparent; border:none;" disabled>
+                                                <input type="text" name="id_product" id="id_product" value="<?= $detail->id_product; ?>" style="background-color: transparent; border:none;" readonly>
                                                 
                                                 <!-- id user  -->
                                                 <?php 
@@ -47,6 +47,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                 <input type="hidden" name="id_user" value="<?= $id; ?>">
 
                                                 <!-- nama produk  -->
+                                                <input type="hidden" name="nama_produk" value="[ <?= $detail->category_name; ?> ]  <?= $detail->product_name; ?> | <?= $detail->variant; ?>">
                                                 <p class="product-details-title fw-bolder fs-10">[ <?= $detail->category_name; ?> ]  <?= $detail->product_name; ?> | <?= $detail->variant; ?></p>
                                                 
                                                 
@@ -66,8 +67,12 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                 <div class="product-details-action">
                                                     <h4 class="price">
                                                         <?php
+                                                        $harga;
+                                                        $discount;
                                                         if ($detail->discount == null) { 
                                                             echo ("Rp " . number_format($detail->price, 0, ',', '.'));
+                                                            $harga = $detail->price;
+                                                            $discount = null;
                                                         ?>
                                                     </h4>
                                                         <?php 
@@ -77,11 +82,16 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                     <h1>
                                                         <?php 
                                                             $harga = $detail->price - ($detail->discount/100 * $detail->price);
-                                                             echo ("Rp " . number_format($harga, 0, ',', '.')) ;
-                                                        }
+                                                            $discount = $detail->discount; 
+                                                            echo ("Rp " . number_format($harga, 0, ',', '.')) ;
+                                                            }
                                                         ;?>
                                                     </h1>
+                                                    <input type="hidden" name="category" value="<?= $detail->category_name; ?>">
+                                                    <input type="hidden" name="variant" value="<?= $detail->variant; ?>">
+                                                    <input type="hidden" name="desc" value="<?= $detail->description; ?>">
                                                     <input type="hidden" name="price" value="<?= $harga; ?>">
+                                                    <input type="hidden" name="discount" value="<?= $discount; ?>">
                                                 </div>
 
                                                 <!-- deskripsi  -->
@@ -95,7 +105,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                 </div>
                                                 <div class="product-details-cart-wishlist mt-4 ">
                                                     <button type="submit" class="btn me-4">Tambah Ke Keranjang</button>
-                                                    <button type="submit" class="btn">Beli Sekarang</button>
+                                                    <!-- <button type="submit" class="btn">Beli Sekarang</button> -->
                                                 </div>
                                             </form>
                                         </div>

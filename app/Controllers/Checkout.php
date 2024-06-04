@@ -19,15 +19,38 @@ class Checkout extends BaseController {
        
        $id = produk();
 
+       $harga_total = $this->request->getVar("price") * $this->request->getVar("qty");
+
         $dataProduk = [
             'id' => $this->request->getVar("id_product") . $id,
             'id_product' => $this->request->getVar("id_product"),
             'id_user' => $this->request->getVar("id_user"),
             'qty' => $this->request->getVar("qty"),
-            'price_total' => $this->request->getVar("price")
+            'price_total' => $harga_total
         ];
 
         $produk->insert($dataProduk);
+
+        return redirect()->to("/");
+    }
+
+    public function invoice() {
+
+        $data = [
+            "title" => "Checkout",
+            "order" => [
+                "id_produk" =>  $this->request->getVar("id_Produk"),
+                "nama_produk" => $this->request->getVar("nama_produk"),
+                "category" => $this->request->getVar("category"),
+                "variant" => $this->request->getVar("variant"),
+                "desc" => $this->request->getVar("desc"),
+                "price" => $this->request->getVar("price"),
+                "discount" => $this->request->getVar("discount"),
+                "qty" => $this->request->getVar("qty"),
+            ]
+        ];
+
+        return view('order/invoice', $data);
     }
 
     // public function update($id) {
