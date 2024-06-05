@@ -129,7 +129,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                         <img src="/assets/produk/<?= $items->image; ?>" width="370" height="450" alt="Image-HasTech">
                                     </a>
                                     <?php 
-                                        if($items->discount != null) {
+                                        if (!isset($items->discount) || $items->discount == null) {
                                     ?>
                                         <span class="flag-new"><?= $items->discount_name; ?></span>
                                     <?php 

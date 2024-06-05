@@ -1,0 +1,182 @@
+CRITICAL - 2024-06-05 00:01:33 --> ErrorException: Undefined property: stdClass::$discount
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 161.
+ 1 APPPATH\Views\pages\Home.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 161)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-05 00:03:07 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-05 00:03:51 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-05 00:03:52 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-05 00:03:52 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-05 00:03:53 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-05 00:03:53 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-05 00:19:51 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+ERROR - 2024-06-05 09:20:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'db_msglow', 3306, '', 0)
+#1 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1471): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1490): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\ProjectSkincareUniba\project_skincare_uniba\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1471): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1490): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#10 C:\ProjectSkincareUniba\project_skincare_uniba\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\ProjectSkincareUniba\project_skincare_uniba\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-05 09:21:41 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-05 09:21:52 --> ErrorException: Undefined property: stdClass::$discount_name
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 134.
+ 1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
