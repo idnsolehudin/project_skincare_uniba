@@ -129,7 +129,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                         <img src="/assets/produk/<?= $items->image; ?>" width="370" height="450" alt="Image-HasTech">
                                     </a>
                                     <?php 
-                                        if($items->discount != null) {
+                                        if (!isset($items->discount) || $items->discount == null) {
                                     ?>
                                         <span class="flag-new"><?= $items->discount_name; ?></span>
                                     <?php 
@@ -214,201 +214,12 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                 <div class="container">
                     <!--== Start Product Category Item ==-->
                     <a href="product.html" class="product-banner-item">
-                        <img src="/assets/images/shop/banner/7.webp" width="1170" height="240" alt="Image-HasTech">
+                        <img src="/assets/images/shop/banner/1170200.jpg" width="1170" height="240" alt="Image-HasTech">
                     </a>
                     <!--== End Product Category Item ==-->
                 </div>
             </section>
-            <!--== End Product Banner Area Wrapper ==-->
 
-
-            <!--== Start Product Area Wrapper ==-->
-            <section class="section-space pt-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-title">
-                                <h2 class="title">Top Sale Products</h2>
-                                <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-n4 mb-sm-n10 g-3 g-sm-6">
-                        <div class="col-6 col-lg-4 mb-4 mb-sm-10">
-                            <!--== Start Product Item ==-->
-                            <div class="product-item product-st2-item">
-                                <div class="product-thumb">
-                                    <a class="d-block" href="product-details.html">
-                                        <img src="/assets/images/shop/8.webp" width="370" height="450" alt="Image-HasTech">
-                                    </a>
-                                    <span class="flag-new">new</span>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-rating">
-                                        <div class="rating">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                        </div>
-                                        <div class="reviews">150 reviews</div>
-                                    </div>
-                                    <h4 class="title"><a href="product-details.html">Readable content DX22</a></h4>
-                                    <div class="prices">
-                                        <span class="price">$210.00</span>
-                                        <span class="price-old">300.00</span>
-                                    </div>
-                                    <div class="product-action">
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product-action-bottom">
-                                        <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
-                                            <i class="fa fa-expand"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                            <i class="fa fa-heart-o"></i>
-                                        </button>
-                                        <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--== End prPduct Item ==-->
-                        </div> 
-                    </div>
-                </div>
-            </section>
-            <!--== End Product Area Wrapper ==-->
-
-            <!--== Start Brand Logo Area Wrapper ==-->
-            <div class="section-space pt-0">
-                <div class="container">
-                    <div class="swiper brand-logo-slider-container">
-                        <div class="swiper-wrapper align-items-center">
-                            <div class="swiper-slide brand-logo-item">
-                                <!--== Start Brand Logo Item ==-->
-                                <img src="/assets/images/brand-logo/1.webp" width="155" height="110" alt="Image-HasTech">
-                                <!--== End Brand Logo Item ==-->
-                            </div>
-                            <div class="swiper-slide brand-logo-item">
-                                <!--== Start Brand Logo Item ==-->
-                                <img src="/assets/images/brand-logo/2.webp" width="241" height="110" alt="Image-HasTech">
-                                <!--== End Brand Logo Item ==-->
-                            </div>
-                            <div class="swiper-slide brand-logo-item">
-                                <!--== Start Brand Logo Item ==-->
-                                <img src="/assets/images/brand-logo/3.webp" width="147" height="110" alt="Image-HasTech">
-                                <!--== End Brand Logo Item ==-->
-                            </div>
-                            <div class="swiper-slide brand-logo-item">
-                                <!--== Start Brand Logo Item ==-->
-                                <img src="/assets/images/brand-logo/4.webp" width="196" height="110" alt="Image-HasTech">
-                                <!--== End Brand Logo Item ==-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--== End Brand Logo Area Wrapper ==-->
-
-            <!--== Start Blog Area Wrapper ==-->
-            <section class="section-space pt-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-title text-center">
-                                <h2 class="title">Blog posts</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-n9">
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="/assets/images/blog/1.webp" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category" href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a></li>
-                                        <li class="post-date">February 13, 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="/assets/images/blog/2.webp" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-two" data-bg-color="#A49CFF" href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Facial Scrub is natural treatment for face.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a></li>
-                                        <li class="post-date">February 13, 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="/assets/images/blog/3.webp" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-three" data-bg-color="#9CDBFF" href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Benefit of Hot Ston Spa for your health & life.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a></li>
-                                        <li class="post-date">February 13, 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--== End Blog Area Wrapper ==-->
-
-            <!--== Start News Letter Area Wrapper ==-->
-            <section class="section-space pt-0">
-                <div class="container">
-                    <div class="newsletter-content-wrap" data-bg-img="/assets/images/photos/bg1.webp">
-                        <div class="newsletter-content">
-                            <div class="section-title mb-0">
-                                <h2 class="title">Join with us</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.</p>
-                            </div>
-                        </div>
-                        <div class="newsletter-form">
-                            <form>
-                                <input type="email" class="form-control" placeholder="enter your email">
-                                <button class="btn-submit" type="submit"><i class="fa fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--== End News Letter Area Wrapper ==-->
 
         </main>
 
@@ -422,9 +233,9 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                             <div class="widget-item">
                                 <div class="widget-about">
                                     <a class="widget-logo" href="index.html">
-                                        <img src="/assets/images/logo.webp" width="95" height="68" alt="Logo">
+                                        <img src="/assets/images/logo1.png" width="200" height="100" alt="Logo">
                                     </a>
-                                    <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                                    <p class="desc">MSGLOW merupakan brand lokal Indonesia yang memproduksi produk kecantikan serta perawatan tubuh. MSGLOW didirikan oleh Shandy Purnamasari dan Maharani Kemala pada tahun 2013. MSGLOW memiliki moto yaitu Magic for Skin, dimana moto tersebut sekaligus menjadi singkatan dari merek mereka.</p>
                                 </div>
                             </div>
                         </div>

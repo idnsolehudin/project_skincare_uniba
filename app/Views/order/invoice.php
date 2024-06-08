@@ -36,208 +36,202 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/assets/css/style.min.css">
 
-      <style>
-          input[type="text"] {
+    <style>
+        input[type="text"] {
             background-color: transparent;
             border: none;
-          }
-      </style>
+        }
+    </style>
 </head>
 <body>
     <div class="container body">
-      <div class="main_container">
-        <div class="m-5">
-          <div class="">
-  
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="clearfix"></div>
+        <div class="main_container">
+            <div class="m-5">
+                <div class="">
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
+                    <!-- page content -->
+                    <div class="right_col" role="main">
+                        <div class="">
+                            <div class="clearfix"></div>
 
-                    <section class="content invoice">
-                      <!-- title row -->
-                      <div class="row">
-                        <div class="  invoice-header">
-                          <h1>
-                              <i class="fa fa-globe"></i> Invoice.
-                              <small class="pull-right">
-                                <?php
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="x_panel">
+                                        <div class="x_title">
 
-            use PhpParser\Node\Stmt\Echo_;
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
 
-                                $tanggal = 'Y-m-d'  ;
-                                echo date($tanggal)
-                                ?>
-                              </small>
-                          </h1>
+                                            <section class="content invoice">
+                                                <!-- title row -->
+                                                <div class="row">
+                                                    <div class="invoice-header">
+                                                        <h1>
+                                                            <i class="fa fa-globe"></i> Invoice.
+                                                            <small class="pull-right">
+                                                                <?php
+                                                                $tanggal = 'Y-m-d';
+                                                                echo date($tanggal);
+                                                                ?>
+                                                            </small>
+                                                        </h1>
+                                                    </div>
+                                                    <!-- /.col -->
+                                                </div>
+                                                <!-- info row -->
+                                                <div class="row invoice-info">
+                                                    <div class="col-sm-4 invoice-col">
+                                                        Dikirim ke :
+                                                        <address>
+                                                            <strong>Iron Admin, Inc.</strong>
+                                                            <br>795 Freedom Ave, Suite 600
+                                                            <br>New York, CA 94107
+                                                            <br>Phone: 1 (804) 123-9876
+                                                            <br>Email: ironadmin.com
+                                                        </address>
+                                                    </div>
+                                                    <!-- /.col -->
+                                                </div>
+                                                <!-- /.row -->
+
+                                                <!-- Table row -->
+                                                <div class="row">
+                                                    <div class="table">
+                                                        <form action="#" method="post">
+                                                            <table class="table table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Nama Produk</th>
+                                                                        <th>Kategori</th>
+                                                                        <th>Varian</th>
+                                                                        <th style="width: 40%">Deskripsi</th>
+                                                                        <th style="width: 10%">Jumlah</th>
+                                                                        <th>Harga Per Item</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <input type="hidden" name="id_produk" value="<?= $order['id_produk']; ?>">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="text" name="nama_produk" id="nama_produk" value="<?= $order['nama_produk']; ?>" readonly>
+                                                                        </td>
+                                                                        <td>
+                                                                            <?= $order['category']; ?>
+                                                                        </td>
+                                                                        <td>
+                                                                            <?= $order['variant']; ?>
+                                                                        </td>
+                                                                        <td>
+                                                                            <?= $order['desc']; ?>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="w-25" name="qty" id="qty" value="<?= $order['qty']; ?>" readonly>
+                                                                        </td>
+                                                                        <td>Rp <?= number_format($order['price'], 0, ',', '.'); ?></td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </form>
+                                                    </div>
+                                                    <!-- /.col -->
+                                                </div>
+                                                <!-- /.row -->
+
+                                                <div class="row">
+                                                    <!-- accepted payments column -->
+                                                    <div class="col-md-6">
+                                                        <h1>Cek Ongkir</h1>
+                                                        <form id="cek-ongkir-form">
+                                                            <label for="origin">Origin:</label>
+                                                            <select id="origin" name="origin"></select><br>
+
+                                                            <label for="destination">Destination:</label>
+                                                            <select id="destination" name="destination"></select><br>
+
+                                                            <label for="weight">Weight (gram):</label>
+                                                            <input type="number" id="weight" name="weight"><br>
+
+                                                            <label for="courier">Courier:</label>
+                                                            <select id="courier" name="courier">
+                                                                <option value="jne">JNE</option>
+                                                                <option value="tiki">TIKI</option>
+                                                                <option value="pos">Pos Indonesia</option>
+                                                            </select><br>
+
+                                                            <button type="submit">Cek Ongkir</button>
+                                                        </form>
+                                                        <div id="result"></div>
+                                                    </div>
+                                                    <!-- /.col -->
+                                                    <div class="col-md-6">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th style="width:50%">Subtotal:</th>
+                                                                        <td>
+                                                                            <input type="hidden" name="price_total" id="price_total" value="<?= $order['nama_produk']; ?>">
+                                                                            : Rp <?php
+                                                                                $harga = $order['price'] * $order['qty'];
+                                                                                echo number_format($harga, 0, ',', '.');
+                                                                                ?>,-
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Ppn (11%)</th>
+                                                                        <td>: Rp <?php
+                                                                                $ppn = 0.11 * $harga;
+                                                                                echo number_format($ppn, 0, ',', '.');
+                                                                                ?>,-
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Ongkir</th>
+                                                                        <td>: Gratis Ongkir</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Total</th>
+                                                                        <td>
+                                                                            <input type="hidden" name="total_price" id="total_price" value="<?php $total_price = $ppn + $harga;
+                                                                                                                                            echo $total_price; ?>">
+                                                                            : Rp <?php
+                                                                                echo number_format($total_price, 0, ',', '.');
+                                                                                ?>,-
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.col -->
+                                                </div>
+                                                <!-- /.row -->
+
+                                                <!-- this row will not appear when printing -->
+                                                <div class="row no-print">
+                                                    <div class=" ">
+                                                        <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
+                                                        <button id="pay-button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
+                                                        <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- info row -->
-                      <div class="row invoice-info">
-                        <div class="col-sm-4 invoice-col">
-                          Dikirim ke :
-                          <address>
-                              <strong>Iron Admin, Inc.</strong>
-                              <br>795 Freedom Ave, Suite 600
-                              <br>New York, CA 94107
-                              <br>Phone: 1 (804) 123-9876
-                              <br>Email: ironadmin.com
-                          </address>
-                        </div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- /.row -->
-
-                      <!-- Table row -->
-                      <div class="row">
-                        <div class="  table">
-                        <form action="#" method="post">
-                          <table class="table table-striped">
-                            <thead>
-                              <tr>
-                                <th>Nama Produk</th>
-                                <th>Kategori</th>
-                                <th>Varian</th>
-                                <th style="width: 40%">Deskripsi</th>
-                                <th style="width: 10%">Jumlah</th>
-                                <th>Harga Per Item</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                            <input type="hidden" name="id_produk" value="<?= $order['id_produk']; ?>">
-                              <tr>
-                                <td>
-                                  <input type="text" name="nama_produk" id="nama_produk" value="<?= $order['nama_produk']; ?>" readonly>
-                                </td>
-                                <td>
-                                  <?= $order['category']; ?>                        
-                                </td>
-                                <td>
-                                  <?= $order['variant']; ?>                       
-                                </td>
-                                <td>                                
-                                  <?= $order['desc']; ?>
-                                </td>
-                                <td>
-                                  <input type="text" class="w-25" name="qty" id="qty" value="<?= $order['qty']; ?>" readonly>
-                                </td>
-                                <td>Rp <?= number_format($order['price'],0,',','.'); ?></td>
-                              </tr>
-                              
-                            </tbody>
-                          </table>
-                        </div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- /.row -->
-
-                      <div class="row">
-                        <!-- accepted payments column -->
-                        <div class="col-md-6">
-                          <h1>Cek Ongkir</h1>
-                          <form id="cek-ongkir-form">
-                              <label for="origin">Origin:</label>
-                              <select id="origin" name="origin"></select><br>
-
-                              <label for="destination">Destination:</label>
-                              <select id="destination" name="destination"></select><br>
-
-                              <label for="weight">Weight (gram):</label>
-                              <input type="number" id="weight" name="weight"><br>
-
-                              <label for="courier">Courier:</label>
-                              <select id="courier" name="courier">
-                                  <option value="jne">JNE</option>
-                                  <option value="tiki">TIKI</option>
-                                  <option value="pos">Pos Indonesia</option>
-                              </select><br>
-
-                              <button type="submit">Cek Ongkir</button>
-                          </form
-                          <div id="result"></div>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-6">
-                          <div class="table-responsive">
-                            <table class="table">
-                              <tbody>
-                                <tr>
-                                  <th style="width:50%">Subtotal:</th>
-                                  <td>
-                                  <input type="hidden" name="price_total" id="price_total" value="<?= $order['nama_produk']; ?>">
-                                  : Rp <?php 
-                                        $harga = $order['price'] * $order['qty'];
-                                        echo number_format($harga,0,',','.'); 
-                                        ?>,-
-                                </td>
-                                </tr>
-                                <tr>
-                                  <th>Ppn (11%)</th>
-                                  <td>: Rp <?php
-                                        $ppn = 0.11 * $harga; 
-                                        echo number_format($ppn,0,',','.'); 
-                                      ?>,-
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <th>Ongkir</th>
-                                  <td>: Gratis Ongkir</td>
-                                </tr>
-                                <tr>
-                                  <th>Total</th>
-                                  <td>
-                                    <input type="hidden" name="total_price" id="total_price" value="<?php $total_price = $ppn + $harga ; echo $total_price;?>">
-                                    : Rp <?php 
-                                          echo number_format($total_price,0,',','.'); 
-                                          ?>,-
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
-                          </div>
-                        </div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- /.row -->
-
-                      <!-- this row will not appear when printing -->
-                      <div class="row no-print">
-                        <div class=" ">
-                          <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
-                          <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
-                          <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                    </div>
+                    <!-- /page content -->
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-        <!-- /page content -->
-        </div>
-        </div>
-        </div>
-        </div>
+    </div>
 
-        <script src="js/jquery.min.js">
-    </script>
-    <script scr="js/bootstrap.min.js">
-    </script>
-
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- JS Vendor, Plugins & Activation Script Files -->
     <!-- bootstrap -->
@@ -256,6 +250,15 @@
 
     <!-- Custom Main JS -->
     <script src="/assets/js/main.js"></script>
+
+    <!-- Midtrans Snap JS -->
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-Pa3KO2uc5zln1UwS"></script>
+    <script type="text/javascript">
+        document.getElementById('pay-button').onclick = function() {
+            // Mengarahkan ke controller untuk mendapatkan Snap Token
+            window.location.href = '<?= base_url('payment/index'); ?>';
+        };
+    </script>
 
     <script>
         $(document).ready(function() {

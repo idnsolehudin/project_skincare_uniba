@@ -756,3 +756,18 @@ WARNING - 2024-06-04 16:54:53 --> [DEPRECATED] number_format(): Passing null to 
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+CRITICAL - 2024-06-04 23:57:24 --> ErrorException: Undefined property: stdClass::$discount
+[Method: GET, Route: /]
+in APPPATH\Views\pages\Home.php on line 132.
+ 1 APPPATH\Views\pages\Home.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 132)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
+ 5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
