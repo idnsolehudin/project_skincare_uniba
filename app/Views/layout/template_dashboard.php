@@ -107,7 +107,7 @@
         <div class="col-md-3 left_col bg-dasboard" >
           <div class="left_col scroll-view bg-dasboard" >
             <div class="navbar nav_title bg-dasboard" style="border: 0;" >
-              <a href="/" class="site_title bg-dasboard" ><img class="logo-main" src="/assets/images/logo.png" width="200" height="40" alt="Logo" /></a>
+              <a href="/" class="site_title bg-dasboard" ><img class="logo-main" src="/assets/images/logo1.png" width="200" height="40" alt="Logo" /></a>
             </div>
 
             <div class="clearfix"></div>

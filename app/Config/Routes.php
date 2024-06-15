@@ -37,14 +37,22 @@ $routes->post('/produk/update/(:segment)','TambahProduk::update/$1');
 $routes->post('/cart/tambah/','Checkout::tambah');
 
 $routes->get('/produk/detail/checkout/(:segment)', 'ProdukKategori::detail_home/$1');
-$routes->post('/invoice','Checkout::invoice');
+$routes->get('/invoice','Checkout::invoice');
+$routes->get('/invoice/getProvinces', 'Checkout::getProvinces');
+$routes->get('/invoice/getCities', 'Invoice::getCities');
+$routes->get('/invoice/getDistricts', 'Invoice::getDistricts');
+// $routes->get('/invoice/checkOngkir', 'Invoice::checkOngkir');
 
 
 $routes->get('/cek', 'Ongkir::index');
+$routes->get('/cekCopy', 'OngkirCopy::index');
 $routes->get('/ongkir/getProvinces', 'Ongkir::getProvinces');
 $routes->get('/ongkir/getCities/(:num)', 'Ongkir::getCities/$1');
-$routes->post('/ongkir/checkOngkir', 'Ongkir::checkOngkir');
+$routes->post('/ongkir/checkOngkirJne', 'Ongkir::checkOngkirJne');
+$routes->post('/ongkir/checkOngkirTiki', 'Ongkir::checkOngkirTiki');
+$routes->post('/ongkir/checkOngkirPos', 'Ongkir::checkOngkirPos');
 
+$routes->get('/submit/ongkir', 'AjaxOngkir::submitData');
 
 /** @var RouteCollection $routes */
 

@@ -32,7 +32,7 @@ class RajaOngkirService
     }
 
     public function getCities($provinceId)
-    {
+    {   
         $response = $this->client->get('city', [
             'query' => ['province' => $provinceId]
         ]);

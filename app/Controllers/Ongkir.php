@@ -65,7 +65,7 @@ class Ongkir extends Controller
 
     public function index()
     {
-        return view('ongkir_form');
+        return view('/order/checkout');
     }
 
     public function getProvinces()
@@ -80,14 +80,72 @@ class Ongkir extends Controller
         return $this->response->setJSON($cities);
     }
 
-    public function checkOngkir()
+    public function checkOngkirJne()
     {
-        $origin = $this->request->getPost('origin');
-        $destination = $this->request->getPost('destination');
-        $weight = $this->request->getPost('weight');
-        $courier = $this->request->getPost('courier');
+        $origin = $this->request->getVar('origin');
+        // $weight = $this->request->getPost('weight');
+        $weight = 1000;
+        $courier = 'jne';
+        // $courier = $this->request->getVar('courier');
+        // $destination = 109;
+        $destination = $this->request->getVar('destination');
 
         $result = $this->rajaOngkirService->getOngkir($origin, $destination, $weight, $courier);
-        return $this->response->setJSON($result);
+        
+        
+       return  $this->response->setJSON($result);
+    }
+
+    public function checkOngkirTiki()
+    {
+        $origin = $this->request->getVar('origin');
+        // $weight = $this->request->getPost('weight');
+        $weight = 1000;
+        $courier = 'tiki';
+        // $courier = $this->request->getVar('courier');
+        // $destination = 109;
+        $destination = $this->request->getVar('destination');
+
+        $result = $this->rajaOngkirService->getOngkir($origin, $destination, $weight, $courier);
+        
+        
+       return  $this->response->setJSON($result);
+    }
+
+    public function checkOngkirPos()
+    {
+        $origin = $this->request->getVar('origin');
+        // $weight = $this->request->getPost('weight');
+        $weight = 1000;
+        $courier = 'pos';
+        // $courier = $this->request->getVar('courier');
+        // $destination = 109;
+        $destination = $this->request->getVar('destination');
+
+        $result = $this->rajaOngkirService->getOngkir($origin, $destination, $weight, $courier);
+        
+        
+       return  $this->response->setJSON($result);
+    }
+
+    public function submit_data() {
+        // if ($this->request->server('REQUEST_METHOD') === 'POST') {
+            $kurir = $this->request->getVar('kurir');
+            $layanan = $this->request->getVar('layanan');
+            $harga = $this->request->getVar('harga');
+
+            // Proses data sesuai kebutuhan, misalnya menyimpan ke database
+
+            // Mengirim respons kembali ke klien
+            echo json_encode([
+                'status' => 'success',
+                'message' => "kurir: $kurir, layanan: $layanan, harga : $harga"
+            ]);
+        // } else {
+        //     echo json_encode([
+        //         'status' => 'error',
+        //         'message' => 'Invalid Request'
+        //     ]);
+        // }
     }
 }
