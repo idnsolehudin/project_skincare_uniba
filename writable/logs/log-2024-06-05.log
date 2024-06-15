@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+WARNING - 2024-06-05 16:57:01 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pages\Home.php on line 162.
+ 1 APPPATH\Views\pages\Home.php(162): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+=======
 CRITICAL - 2024-06-05 00:01:33 --> ErrorException: Undefined property: stdClass::$discount
 [Method: GET, Route: /]
 in APPPATH\Views\pages\Home.php on line 161.
  1 APPPATH\Views\pages\Home.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 161)
  2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+>>>>>>> 1985036c0a9a5474e912411079502d675aad46a2
  3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
  5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
@@ -12,12 +18,19 @@ in APPPATH\Views\pages\Home.php on line 161.
  9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+WARNING - 2024-06-05 16:57:01 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\pages\Home.php on line 162.
+ 1 APPPATH\Views\pages\Home.php(162): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+=======
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
 CRITICAL - 2024-06-05 00:03:07 --> ErrorException: Undefined property: stdClass::$discount_name
 [Method: GET, Route: /]
 in APPPATH\Views\pages\Home.php on line 134.
  1 APPPATH\Views\pages\Home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount_name', 'C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php', 134)
  2 SYSTEMPATH\View\View.php(234): include('C:\\ProjectSkincareUniba\\project_skincare_uniba\\app\\Views\\pages\\Home.php')
+>>>>>>> 1985036c0a9a5474e912411079502d675aad46a2
  3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/Home', [], true)
  5 APPPATH\Controllers\Pages.php(24): view('pages/Home', [...])
@@ -27,6 +40,10 @@ in APPPATH\Views\pages\Home.php on line 134.
  9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\solehudin1725\\Documents\\MATERI PERKULIAHAN SMT 6\\project_skincare_uniba\\public\\index.php')
+INFO - 2024-06-05 16:58:12 --> CSRF token verified.
+=======
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
 CRITICAL - 2024-06-05 00:03:51 --> ErrorException: Undefined property: stdClass::$discount_name
 [Method: GET, Route: /]
@@ -2226,3 +2243,4 @@ WARNING - 2024-06-05 18:50:57 --> [DEPRECATED] number_format(): Passing null to 
 11 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\ProjectSkincareUniba\\project_skincare_uniba\\public\\index.php')
 INFO - 2024-06-05 18:51:02 --> CSRF token verified.
+>>>>>>> 1985036c0a9a5474e912411079502d675aad46a2

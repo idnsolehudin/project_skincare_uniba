@@ -125,7 +125,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                             
                             <div class="product-item product-st2-item">
                                 <div class="product-thumb">
-                                    <a class="d-block" href="product-details.html">
+                                    <a class="d-block" href="/produk/detail/checkout/<?= $items->slug; ?>">
                                         <img src="/assets/produk/<?= $items->image; ?>" width="370" height="450" alt="Image-HasTech">
                                     </a>
                                     <?php 

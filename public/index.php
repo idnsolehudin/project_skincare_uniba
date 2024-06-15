@@ -6,10 +6,6 @@
  *---------------------------------------------------------------
  */
 
-
-
-
-
 $minPhpVersion = '8.1'; // If you update this, don't forget to update `spark`.
 if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
     $message = sprintf(
@@ -50,19 +46,11 @@ if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
 // LOAD OUR PATHS CONFIG FILE
 // This is the line that might need to be changed, depending on your folder structure.
 require FCPATH . '../app/Config/Paths.php';
-
+// ^^^ Change this line if you move your application folder
 
 $paths = new Config\Paths();
 
-
+// LOAD THE FRAMEWORK BOOTSTRAP FILE
 require $paths->systemDirectory . '/Boot.php';
 
 exit(CodeIgniter\Boot::bootWeb($paths));
-
-
-require '../vendor/autoload.php';
-
-use App\Controllers\TransactionController;
-
-$controller = new TransactionController();
-$controller->createTransaction();

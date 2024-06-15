@@ -1,7 +1,11 @@
 <?php 
 namespace App\Controllers;
 
-use App\Models\InsertCheckout;
+
+use CodeIgniter\Controller;
+use App\Models\InsertCheckout;  
+// use App\Services\RajaOngkirService;
+use CodeIgniter\HTTP\RequestInterface;
 
 class Checkout extends BaseController {
 
@@ -53,121 +57,100 @@ class Checkout extends BaseController {
         return view('order/invoice', $data);
     }
 
-    // public function update($id) {
-    //     $produk = new InsertProdukModel();
-    //     $detail = new InsertDetailModel(); 
+    public function getProvinces()
+    {
+        $curl = curl_init();
 
-    //     $db = \Config\Database::connect();
-    //     $db->transStart();
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://api.rajaongkir.com/starter/province",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => array(
+            "key: 970a0d33227e4cb6db9d669a40b76c2f"
+        ),
+        ));
 
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
 
-    //     // function produkId() {
+        curl_close($curl);
 
-    //     //      $timestamp = time();
-    //     //      $second = date("s", $timestamp);
-            
-    //     //      return $second;
-    //     // }
-       
-    //     // $id = produkId();
+        if ($err) {
+        echo "cURL Error #:" . $err;
+        } else {
+        $data = json_decode($response,true);
 
-    //     $nm_produk = $this->request->getVar("nama");
-    //     $slug = str_replace(' ','-',$nm_produk);
-        
-    //     $id_detail = $this->request->getVar("id");
+        // echo "<pre>"; 
+        //   print_r($data); 
+        // echo "</pre>";
+        }
 
-    //     $dataDetail = [
-    //         'id' => $this->request->getVar("id"),
-    //         'id_product' => $this->request->getVar("id_produk"),
-    //         'variant' => $this->request->getVar("varian"),
-    //         'slug' => $slug,
-    //         'rating' => $this->request->getVar("rating"),
-    //         'stock' => $this->request->getVar("stok"),
-    //         'price' => $this->request->getVar("harga"),
-    //         'description' => $this->request->getVar("deskripsi"),
-    //         'discount' => $this->request->getVar("potongan"),
-    //         'discount_name' => $this->request->getVar("promo")
-    //     ];
+        return view('order/invoice', $data);
+    }
 
+    public function getCities()
+    {
+        $api_key = '6a4253274d8e7973c5e3bf87b36e591f';
+        $province_id = $this->request->getGet('province_id');
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://api.rajaongkir.com/starter/city?province=' . $province_id);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'key: ' . $api_key
+        ]);
+        $response = curl_exec($ch);
+        curl_close($ch);
 
+        echo $response;
+    }
 
-    //     $id_produk = $this->request->getVar("id_produk");
+    public function getDistricts()
+    {
+        $api_key = '6a4253274d8e7973c5e3bf87b36e591f';
+        $city_id = $this->request->getGet('city_id');
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://api.rajaongkir.com/starter/subdistrict?city=' . $city_id);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'key: ' . $api_key
+        ]);
+        $response = curl_exec($ch);
+        curl_close($ch);
 
-    //     $dataProduk = [
-    //         'id' => $this->request->getVar("id_produk"),
-    //         'category_id' => $this->request->getVar("kategori"),
-    //         'product_name' => $this->request->getVar("nama")
-    //     ];
+        echo $response;
+    }
 
-    //     $produk->update($id_produk, $dataProduk);
+    public function checkOngkir()
+    {
+        $api_key = 'YOUR_RAJAONGKIR_API_KEY';
+        $origin = 'YOUR_ORIGIN_CITY_ID';
+        $destination = $this->request->getGet('destination');
+        $weight = $this->request->getGet('weight');
+        $courier = 'jne';
 
-    //     $detail->where('id_product', $id)->set($dataDetail)->update();
-       
-    //     $db->transComplete();
+        $params = [
+            'origin' => $origin,
+            'destination' => $destination,
+            'weight' => $weight,
+            'courier' => $courier
+        ];
 
-    //     session()->setFlashdata("pesan", "Data Berhasil Diperbarui..");
-    //     return redirect()->to('/dashboard/produk');
-    // }
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://api.rajaongkir.com/starter/cost');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'key: ' . $api_key,
+            'content-type: application/x-www-form-urlencoded'
+        ]);
+        $response = curl_exec($ch);
+        curl_close($ch);
 
-
-    // public function submit() {
-    //     $produk = new InsertProdukModel();
-    //     $detail = new InsertDetailModel(); 
-
-    //     function produk() {
-
-    //          $timestamp = time();
-    //          $second = date("s", $timestamp);
-            
-    //          return $second;
-    //     }
-       
-    //     $id = produk();
-
-    //     $nm_produk = $this->request->getVar("nama");
-    //     $slug = str_replace(' ','-',$nm_produk);
-
-    //     $dataProduk = [
-    //         'id' => $this->request->getVar("kategori") . $id,
-    //         'category_id' => $this->request->getVar("kategori"),
-    //         'product_name' => $this->request->getVar("nama")
-    //     ];
-
-    //     //mengambil file image
-    //     $fileImage = $this->request->getFile('image');
-
-    //     //apakah tidak ada gambar yang diupload 
-    //     if ($fileImage->getError() == 4) {
-    //         //mengambil gambar default
-    //         $namaImage = 'picture_icon.jpeg';
-    //     } else {
-
-    //         //ambil nama file gambar dan menjadikan nama random
-    //         $namaImage = $fileImage->getRandomName();
-    
-    //         //memindahkan file ke folder image produk
-    //         $fileImage->move('assets/produk',$namaImage);
-    //     }
-
-
-     
-
-    //     $dataDetail = [
-    //         'id' => $dataProduk['id'] . $id,
-    //         'id_product' => $dataProduk['id'],
-    //         'variant' => $this->request->getVar("varian"),
-    //         'slug' => $slug,
-    //         'stock' => $this->request->getVar("stok"),
-    //         'price' => $this->request->getVar("harga"),
-    //         'image' => $namaImage,
-    //         'description' => $this->request->getVar("deskripsi")
-    //     ];
-
-    //     $produk->insert($dataProduk);
-    //     $detail->insert($dataDetail);
-
-    //     session()->setFlashdata("pesan", "Data Berhasil Ditambahkan..");
-    //     return redirect()->to('/dashboard/produk');
-        
-    // }
+        echo $response;
+    }
 }
