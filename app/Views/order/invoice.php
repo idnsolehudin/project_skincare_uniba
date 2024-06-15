@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="/assets/css/style.min.css">
 
 
-      <style>
+    <style>
         input[type="text"] {
             background-color: transparent;
             border: none;
@@ -49,7 +49,7 @@
         }
 
         .courier:hover {
-           filter: drop-shadow(1px 1px 40px red); 
+            filter: drop-shadow(1px 1px 40px red); 
         }
 
         #box-ongkir {
@@ -119,7 +119,7 @@
                                                 <!-- Table row -->
                                                 <div class="row">
                                                     <div class="table">
-                                                        <form action="#" method="post">
+                                                        <form id="checkout-form" action="#" method="post" onsubmit="calculateTotal()">
                                                             <table class="table table-striped">
                                                                 <thead>
                                                                     <tr>
@@ -277,9 +277,14 @@
                                                 <!-- this row will not appear when printing -->
                                                 <div class="row no-print">
                                                     <div class=" ">
-                                                        <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
-                                                        <button id="pay-button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
-                                                        <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+                                                        
+                                                        <form method="post" action="/payment" style="display: inline-block;" onsubmit="return validateTotal()">
+                                                            <?= csrf_field() ?>
+                                                            <input type="hidden" name="total" id="form-total" value="">
+                                                            <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print" style="margin-left: 5px;"></i> Print</button>
+                                                            <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+                                                            <button id="pay-button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </section>
@@ -298,24 +303,11 @@
     <script>
         $(document).ready(function() {
             // Load provinsi dari API RajaOngkir saat halaman dimuat
-            // $.ajax({
-            //     url: '<//?= base_url('/invoice/getProvinces') ?>',
-            //     method: 'GET',
-            //     success: function(response) {
-            //         let provinces = JSON.parse(response);
-            //         $.each(provinces, function(key, value) {
-            //             $('#province').append('<option value="'+value.province_id+'">'+value.province+'</option>');
-            //         });
-            //     }
-            // });
-
-            // Fetch provinces on page load
             $.getJSON('/ongkir/getProvinces', function(data) {
-            var provinces = data.rajaongkir.results;
-            $.each(provinces, function(index, province) {
-                $('#province').append('<option value="' + province.province_id + '">' + province.province + '</option>');
-                // $('#destination').append('<option value="' + province.province_id + '">' + province.province + '</option>');
-            });
+                var provinces = data.rajaongkir.results;
+                $.each(provinces, function(index, province) {
+                    $('#province').append('<option value="' + province.province_id + '">' + province.province + '</option>');
+                });
             });
 
             // Load kabupaten/kota berdasarkan provinsi yang dipilih
@@ -332,12 +324,6 @@
                 });
             });
 
-            // $('#destination').change(function() {
-            //     $("#jasa-kirim").removeClass('d-none');
-            //     $("#jasa-kirim").addClass('d-block');
-            // }
-
-
             // Cek ongkir saat tombol diklik
             $('#ongkir-jne').click(function() {
                 $('#btn-ongkir').removeClass('d-none');
@@ -346,7 +332,6 @@
                 $("#jasa-kirim").addClass('d-block');
                 let origin = $('#origin').val();
                 let destination = $('#destination').val();
-                // let destination = 109;
                 let weight = 1000;
                 let courier = 'jne';
 
@@ -362,8 +347,6 @@
                         },
                         
                         success: function(response) {
-                            // let result = JSON.parse(response);
-                            console.log(response);
                             let result = response;
                             let output = '';
                             if (result.rajaongkir && result.rajaongkir.results.length > 0) {
@@ -384,7 +367,6 @@
                                                
                                         </div>
                                         `;
-                                      
                                     });
                                 });
                             } else {
@@ -405,7 +387,6 @@
                 $("#jasa-kirim").addClass('d-block');
                 let origin = $('#origin').val();
                 let destination = $('#destination').val();
-                // let destination = 109;
                 let weight = 1000;
                 let courier = 'tiki';
 
@@ -421,8 +402,6 @@
                         },
                         
                         success: function(response) {
-                            // let result = JSON.parse(response);
-                            console.log(response);
                             let result = response;
                             let output = '';
                             if (result.rajaongkir && result.rajaongkir.results.length > 0) {
@@ -440,10 +419,8 @@
                                                 <h5>Estimasi :</h5>
                                                 <i>${cost.cost[0].etd} hari</i>
                                                 <br>
-                                               
                                         </div>
                                         `;
-                                      
                                     });
                                 });
                             } else {
@@ -464,7 +441,6 @@
                 $("#jasa-kirim").addClass('d-block');
                 let origin = $('#origin').val();
                 let destination = $('#destination').val();
-                // let destination = 109;
                 let weight = 1000;
                 let courier = 'pos';
 
@@ -480,8 +456,6 @@
                         },
                         
                         success: function(response) {
-                            // let result = JSON.parse(response);
-                            console.log(response);
                             let result = response;
                             let output = '';
                             if (result.rajaongkir && result.rajaongkir.results.length > 0) {
@@ -499,10 +473,8 @@
                                                 <h5>Estimasi :</h5>
                                                 <i>${cost.cost[0].etd} hari</i>
                                                 <br>
-                                               
                                         </div>
                                         `;
-                                      
                                     });
                                 });
                             } else {
@@ -540,7 +512,9 @@
                         
                         $("#jasa-kirim").removeClass('d-block');
                         $("#jasa-kirim").addClass('d-none');
-                    
+
+                        // Update hidden input field
+                        $('#form-total').val(hargaTotal);
                     },
                     error: function(error) {
                         console.error("Error:", error);
@@ -548,10 +522,25 @@
                 });
             });
         });
-    </script>
 
-    <!-- <script src="js/jquery.min.js"></script> -->
-    <script src="js/bootstrap.min.js"></script>
+        function calculateTotal() {
+            var harga = parseFloat($('#harga').val());
+            var ppn = parseFloat($('#ppn').val());
+            var ongkir = parseFloat($('input[name="harga"]:checked').val());
+
+            var total = harga + ppn + ongkir;
+            $('#form-total').val(total);
+        }
+
+        function validateTotal() {
+            var total = $('#form-total').val();
+            if (!total || total <= 0) {
+                alert('Total amount is invalid.');
+                return false;
+            }
+            return true;
+        }
+    </script>
 
     <!-- JS Vendor, Plugins & Activation Script Files -->
     <!-- bootstrap -->
@@ -559,27 +548,16 @@
 
     <!-- Vendors JS -->
     <script src="/assets/js/vendor/modernizr-3.11.7.min.js"></script>
-    <!-- <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script> -->
-    <!-- <script src="/assets/js/vendor/jquery-migrate-3.3.2.min.js"></script> -->
     <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
 
     <!-- Plugins JS -->
     <script src="/assets/js/plugins/swiper-bundle.min.js"></script>
     <script src="/assets/js/plugins/fancybox.min.js"></script>
-    <!-- <script src="/assets/js/plugins/jquery.nice-select.min.js"></script> -->
 
     <!-- Custom Main JS -->
     <script src="/assets/js/main.js"></script>
 
     <!-- Midtrans Snap JS -->
     <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-Pa3KO2uc5zln1UwS"></script>
-    <script type="text/javascript">
-        document.getElementById('pay-button').onclick = function() {
-            // Mengarahkan ke controller untuk mendapatkan Snap Token
-            window.location.href = '<?= base_url('payment/index'); ?>';
-        };
-    </script>
-
 </body>
-
 </html>
