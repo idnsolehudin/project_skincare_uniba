@@ -132,12 +132,12 @@
                 <ul class="nav side-menu">
                   <li><a href="/dashboard/"><span class="m-3"> MENU DASHBOARD </span> </a> </li>
                   <li><a href="/dashboard/produk"><i class="fa-solid fa-clipboard-list"></i><span class="m-3"> Produk </span> </a> </li>
-                  <li><a href="/dashboard/transaksi"><i class="fa-solid fa-credit-card"></i> <span class="m-3"> Transaksi </span> </a> </li>
-                  <li><a href="/dashboard/customer"><i class="fa-solid fa-people-line"></i> <span class="m-3"> Customer </span> </a> </li>
-                  <li><a href="/dashboard/reseller"><i class="fa-solid fa-people-arrows"></i><span class="m-3"> Reseller </span> </a> </li>
-                  <li><a href="/dashboard/order"><i class="fa-solid fa-cart-shopping"></i> <span class="m-3"> Order </span> </a> </li>
-                  <li><a href="/dashboard/laporan"><i class="fa-solid fa-chart-line"></i> <span class="m-3"> Laporan </span> </a> </li>
-                  <li><a href="/dashboard/keuangan"><i class="fa-solid fa-money-check-dollar"></i> <span class="m-3"> Keuangan </span> </a> </li>
+                  <!-- <li><a href="/dashboard/transaksi"><i class="fa-solid fa-credit-card"></i> <span class="m-3"> Transaksi </span> </a> </li> -->
+                  <li><a href="#"><i class="fa-solid fa-people-line"></i> <span class="m-3"> Customer </span> </a> </li>
+                  <li><a href="#"><i class="fa-solid fa-people-arrows"></i><span class="m-3"> Reseller </span> </a> </li>
+                  <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> <span class="m-3"> Order </span> </a> </li>
+                  <li><a href="#"><i class="fa-solid fa-chart-line"></i> <span class="m-3"> Laporan </span> </a> </li>
+                  <li><a href="#"><i class="fa-solid fa-money-check-dollar"></i> <span class="m-3"> Keuangan </span> </a> </li>
                 </ul>
               </div>
               
