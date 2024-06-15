@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="bootstrap, ecommerce, ecommerce html, beauty, cosmetic shop, beauty products, cosmetic, beauty shop, cosmetic store, shop, beauty store, spa, cosmetic, cosmetics, beauty salon" />
     <meta name="author" content="codecarnival" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/msglow_large.png">
@@ -36,10 +37,30 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/assets/css/style.min.css">
 
-    <style>
+
+      <style>
         input[type="text"] {
             background-color: transparent;
             border: none;
+        }
+        input[type="number"] {
+            background-color: transparent;
+            border: none;
+        }
+
+        .courier:hover {
+           filter: drop-shadow(1px 1px 40px red); 
+        }
+
+        #box-ongkir {
+            background-color: lightpink;
+        }
+        #box-ongkir:hover {
+            background-color: indianred;
+        }
+        .custom-radio {
+            transform: scale(2.5); /* Mengubah ukuran radio button */
+            -webkit-transform: scale(2.5); /* Untuk browser WebKit */
         }
     </style>
 </head>
@@ -68,7 +89,7 @@
                                                 <div class="row">
                                                     <div class="invoice-header">
                                                         <h1>
-                                                            <i class="fa fa-globe"></i> Invoice.
+                                                            <i class="fa fa-cart-arrow-down"></i> Checkout.
                                                             <small class="pull-right">
                                                                 <?php
                                                                 $tanggal = 'Y-m-d';
@@ -82,13 +103,13 @@
                                                 <!-- info row -->
                                                 <div class="row invoice-info">
                                                     <div class="col-sm-4 invoice-col">
-                                                        Dikirim ke :
+                                                        Dikirim Oleh :
                                                         <address>
-                                                            <strong>Iron Admin, Inc.</strong>
-                                                            <br>795 Freedom Ave, Suite 600
-                                                            <br>New York, CA 94107
-                                                            <br>Phone: 1 (804) 123-9876
-                                                            <br>Email: ironadmin.com
+                                                            <strong>Bunga Cinta Store</strong>
+                                                            <br>Kawasan Industri Grand Surya Balaraja
+                                                            <br>Kp. Peuteuy, Ds. Tobat, Kec. Balaraja, Tangerang - Banten 15610
+                                                            <br>No Telepon : 0857-5345-7632
+                                                            <br>Email : bungacintaofficial@gmail.com
                                                         </address>
                                                     </div>
                                                     <!-- /.col -->
@@ -134,6 +155,7 @@
                                                                 </tbody>
                                                             </table>
                                                         </form>
+
                                                     </div>
                                                     <!-- /.col -->
                                                 </div>
@@ -142,27 +164,70 @@
                                                 <div class="row">
                                                     <!-- accepted payments column -->
                                                     <div class="col-md-6">
-                                                        <h1>Cek Ongkir</h1>
-                                                        <form id="cek-ongkir-form">
-                                                            <label for="origin">Origin:</label>
-                                                            <select id="origin" name="origin"></select><br>
+                                                    <form id="ongkir-form" >
+                                                        <!-- alamat asal pengiriman  -->
+                                                        <input type="hidden" id="origin" name="origin" value="455">
+                                                        
+                                                        <!-- <label for="province">Provinsi:</label> -->
+                                                        <select class="form-control mt-2" id="province" name="province" required>
+                                                            <option value="">Pilih Provinsi</option>
+                                                            <!-- Tambahkan opsi provinsi di sini -->
+                                                        </select>
 
-                                                            <label for="destination">Destination:</label>
-                                                            <select id="destination" name="destination"></select><br>
 
-                                                            <label for="weight">Weight (gram):</label>
-                                                            <input type="number" id="weight" name="weight"><br>
 
-                                                            <label for="courier">Courier:</label>
-                                                            <select id="courier" name="courier">
-                                                                <option value="jne">JNE</option>
-                                                                <option value="tiki">TIKI</option>
-                                                                <option value="pos">Pos Indonesia</option>
-                                                            </select><br>
 
-                                                            <button type="submit">Cek Ongkir</button>
-                                                        </form>
-                                                        <div id="result"></div>
+                                                        <!-- <label for="destination-city">Kabupaten/Kota:</label> -->
+                                                        <select class="form-control mt-2" id="destination" name="destination" aria-placeholder="Pilih Kabupaten/Kota" required>
+                                                            <option value="">Pilih Kabupaten/Kota</option>
+                                                            <!-- Akan diisi berdasarkan pilihan provinsi -->
+                                                        </select>
+
+                                                        <textarea name="address" id="address" cols="30" rows="3" placeholder="Alamat Lengkap" class="form-control mt-2"></textarea>
+                                                   
+                                                        <label for="courier" class="my-3">Jasa Kirim:</label>
+
+                                                        
+
+                                                        <!-- <select class="form-control" id="courier" name="courier" required>
+                                                            <option value="">Pilih Jasa Kirim</option>
+                                                            <option value="jne">JNE</option>
+                                                            <option value="tiki">TIKI</option>
+                                                            <option value="pos">POS Indonesia</option>
+                                                         
+                                                        </select> -->
+                                                            <!-- input hidden berat barang contoh  -->
+                                                             <!-- <input type="hidden" name="weight" value=""> -->
+                                                        <br>
+                                                        <input type="hidden" id="weight" name="weight" value="<?= $order['qty'] * 1000 ?>"> <!-- Asumsi berat per item 1kg -->
+                                                        <div class="d-flex justify-content-around m-4">
+                                                            <div id="ongkir-jne" class="courier">
+                                                                <img src="/assets/images/jne.png" alt="JNE" width="115px">
+                                                            </div>
+                                                            <div id="ongkir-tiki" class="courier">
+                                                                <img src="/assets/images/tiki.png" alt="TIKI" width="195px">
+                                                            </div>
+                                                            <div id="ongkir-pos" class="courier">
+                                                                <img src="/assets/images/pos.png" alt="POS" width="85px">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                
+                                                    <!-- <select name="ongkir-result" id="ongkir-result">
+
+                                                    </select> -->
+                                                    <div id="jasa-kirim" class="d-none">
+                                                   
+                                                       <div id="ongkir-result" class="row">
+
+                                                        </div>
+                                                        <div class="d-none " id="btn-ongkir">
+                                                            <button type="button" class="btn align-center" id="btn-ok">Pilih</button>
+                                                        </div>
+                                                   </div>
+                                                    <!-- <div id="hasil">
+                                                        hasillllnay begini
+                                                    </div> -->
                                                     </div>
                                                     <!-- /.col -->
                                                     <div class="col-md-6">
@@ -172,33 +237,33 @@
                                                                     <tr>
                                                                         <th style="width:50%">Subtotal:</th>
                                                                         <td>
-                                                                            <input type="hidden" name="price_total" id="price_total" value="<?= $order['nama_produk']; ?>">
-                                                                            : Rp <?php
+                                                                            <!-- <input type="hidden" name="price_total" id="price_total" value="</?= $order['nama_produk']; ?>"> -->
+                                                                             <?php
                                                                                 $harga = $order['price'] * $order['qty'];
-                                                                                echo number_format($harga, 0, ',', '.');
-                                                                                ?>,-
+                                                                                ?>
+                                                                            : Rp <input type="number" name="harga" id="harga" value="<?= $harga; ?>" readonly>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>Ppn (11%)</th>
-                                                                        <td>: Rp <?php
+                                                                        <td><?php
                                                                                 $ppn = 0.11 * $harga;
-                                                                                echo number_format($ppn, 0, ',', '.');
-                                                                                ?>,-
+                                                                                ?>
+                                                                             : Rp <input type="number" name="ppn" id="ppn" value="<?= $ppn; ?>" readonly>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>Ongkir</th>
-                                                                        <td>: Gratis Ongkir</td>
+                                                                        <td id="hasil">: </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>Total</th>
-                                                                        <td>
-                                                                            <input type="hidden" name="total_price" id="total_price" value="<?php $total_price = $ppn + $harga;
+                                                                        <td id="total">: 
+                                                                            <!-- <input type="hidden" name="total_price" id="total_price" value="<?php $total_price = $ppn + $harga;
                                                                                                                                             echo $total_price; ?>">
-                                                                            : Rp <?php
+                                                                            : Rp </?php
                                                                                 echo number_format($total_price, 0, ',', '.');
-                                                                                ?>,-
+                                                                                ?>,- -->
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -221,6 +286,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -229,8 +295,262 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            // Load provinsi dari API RajaOngkir saat halaman dimuat
+            // $.ajax({
+            //     url: '<//?= base_url('/invoice/getProvinces') ?>',
+            //     method: 'GET',
+            //     success: function(response) {
+            //         let provinces = JSON.parse(response);
+            //         $.each(provinces, function(key, value) {
+            //             $('#province').append('<option value="'+value.province_id+'">'+value.province+'</option>');
+            //         });
+            //     }
+            // });
 
-    <script src="js/jquery.min.js"></script>
+            // Fetch provinces on page load
+            $.getJSON('/ongkir/getProvinces', function(data) {
+            var provinces = data.rajaongkir.results;
+            $.each(provinces, function(index, province) {
+                $('#province').append('<option value="' + province.province_id + '">' + province.province + '</option>');
+                // $('#destination').append('<option value="' + province.province_id + '">' + province.province + '</option>');
+            });
+            });
+
+            // Load kabupaten/kota berdasarkan provinsi yang dipilih
+            $('#province').change(function() {
+                $("#jasa-kirim").removeClass('d-none');
+                $("#jasa-kirim").addClass('d-block');
+                var provinceId = $(this).val();
+                $.getJSON('/ongkir/getCities/' + provinceId, function(data) {
+                    var cities = data.rajaongkir.results;
+                    $('#destination').empty();
+                    $.each(cities, function(index, city) {
+                        $('#destination').append('<option value="' + city.city_id + '">' + city.type + ' ' +city.city_name + '</option>');
+                    });
+                });
+            });
+
+            // $('#destination').change(function() {
+            //     $("#jasa-kirim").removeClass('d-none');
+            //     $("#jasa-kirim").addClass('d-block');
+            // }
+
+
+            // Cek ongkir saat tombol diklik
+            $('#ongkir-jne').click(function() {
+                $('#btn-ongkir').removeClass('d-none');
+                $('#btn-ongkir').addClass('d-block text-center');
+                $("#jasa-kirim").removeClass('d-none');
+                $("#jasa-kirim").addClass('d-block');
+                let origin = $('#origin').val();
+                let destination = $('#destination').val();
+                // let destination = 109;
+                let weight = 1000;
+                let courier = 'jne';
+
+                if(destination && weight) {
+                    $.ajax({
+                        url: '<?= base_url('/ongkir/checkOngkirJne') ?>',
+                        method: 'get',
+                        data: {
+                            origin: origin,
+                            destination: destination,
+                            weight: weight,
+                            courier: courier
+                        },
+                        
+                        success: function(response) {
+                            // let result = JSON.parse(response);
+                            console.log(response);
+                            let result = response;
+                            let output = '';
+                            if (result.rajaongkir && result.rajaongkir.results.length > 0) {
+                                result.rajaongkir.results.forEach(courier => {
+                                    courier.costs.forEach(cost => {
+                                    output += `
+                                        <div class="col text-center mx-2 my-3 p-3 rounded" for="${cost.cost[0].value}" id="box-ongkir">
+                                                <input type="radio" class="custom-radio" id="${cost.cost[0].value}" name="harga" value="${cost.cost[0].value}">
+                                                <br>
+                                                <b>JNE</b> 
+                                                <h3> ${cost.service}</h3>
+                                                <i> (${cost.description})</i>
+                                                <h5>Harga :</h5>
+                                                <b>Rp. ${cost.cost[0].value}</b>
+                                                <h5>Estimasi :</h5>
+                                                <i>${cost.cost[0].etd} hari</i>
+                                                <br>
+                                               
+                                        </div>
+                                        `;
+                                      
+                                    });
+                                });
+                            } else {
+                                output = 'Gagal mengambil data ongkos kirim.';
+                            }
+                            $('#ongkir-result').html(output);
+                        }
+                    });
+                } else {
+                    $('#ongkir-result').html('Pilih semua opsi terlebih dahulu.');
+                }
+            });
+            
+            $('#ongkir-tiki').click(function() {
+                $('#btn-ongkir').removeClass('d-none');
+                $('#btn-ongkir').addClass('d-block text-center');
+                $("#jasa-kirim").removeClass('d-none');
+                $("#jasa-kirim").addClass('d-block');
+                let origin = $('#origin').val();
+                let destination = $('#destination').val();
+                // let destination = 109;
+                let weight = 1000;
+                let courier = 'tiki';
+
+                if(destination && weight) {
+                    $.ajax({
+                        url: '<?= base_url('/ongkir/checkOngkirTiki') ?>',
+                        method: 'get',
+                        data: {
+                            origin: origin,
+                            destination: destination,
+                            weight: weight,
+                            courier: courier
+                        },
+                        
+                        success: function(response) {
+                            // let result = JSON.parse(response);
+                            console.log(response);
+                            let result = response;
+                            let output = '';
+                            if (result.rajaongkir && result.rajaongkir.results.length > 0) {
+                                result.rajaongkir.results.forEach(courier => {
+                                    courier.costs.forEach(cost => {
+                                    output += `
+                                        <div class="col text-center mx-2 my-3 p-3 rounded" for="${cost.cost[0].value}" id="box-ongkir">
+                                                <input type="radio" class="custom-radio" id="${cost.cost[0].value}" name="harga" value="${cost.cost[0].value}">
+                                                <br>
+                                                <b>TIKI</b> 
+                                                <h3> ${cost.service}</h3>
+                                                <i> (${cost.description})</i>
+                                                <h5>Harga :</h5>
+                                                <b>Rp. ${cost.cost[0].value}</b>
+                                                <h5>Estimasi :</h5>
+                                                <i>${cost.cost[0].etd} hari</i>
+                                                <br>
+                                               
+                                        </div>
+                                        `;
+                                      
+                                    });
+                                });
+                            } else {
+                                output = 'Gagal mengambil data ongkos kirim.';
+                            }
+                            $('#ongkir-result').html(output);
+                        }
+                    });
+                } else {
+                    $('#ongkir-result').html('Pilih semua opsi terlebih dahulu.');
+                }
+            });
+
+            $('#ongkir-pos').click(function() {
+                $('#btn-ongkir').removeClass('d-none');
+                $('#btn-ongkir').addClass('d-block text-center');
+                $("#jasa-kirim").removeClass('d-none');
+                $("#jasa-kirim").addClass('d-block');
+                let origin = $('#origin').val();
+                let destination = $('#destination').val();
+                // let destination = 109;
+                let weight = 1000;
+                let courier = 'pos';
+
+                if(destination && weight) {
+                    $.ajax({
+                        url: '<?= base_url('/ongkir/checkOngkirPos') ?>',
+                        method: 'get',
+                        data: {
+                            origin: origin,
+                            destination: destination,
+                            weight: weight,
+                            courier: courier
+                        },
+                        
+                        success: function(response) {
+                            // let result = JSON.parse(response);
+                            console.log(response);
+                            let result = response;
+                            let output = '';
+                            if (result.rajaongkir && result.rajaongkir.results.length > 0) {
+                                result.rajaongkir.results.forEach(courier => {
+                                    courier.costs.forEach(cost => {
+                                    output += `
+                                        <div class="col text-center mx-2 my-3 p-3 rounded" for="${cost.cost[0].value}" id="box-ongkir">
+                                                <input type="radio" class="custom-radio" id="${cost.cost[0].value}" name="harga" value="${cost.cost[0].value}">
+                                                <br>
+                                                <b>POS INDONESIA</b> 
+                                                <h3> ${cost.service}</h3>
+                                                <i> (${cost.description})</i>
+                                                <h5>Harga :</h5>
+                                                <b>Rp. ${cost.cost[0].value}</b>
+                                                <h5>Estimasi :</h5>
+                                                <i>${cost.cost[0].etd} hari</i>
+                                                <br>
+                                               
+                                        </div>
+                                        `;
+                                      
+                                    });
+                                });
+                            } else {
+                                output = 'Gagal mengambil data ongkos kirim.';
+                            }
+                            $('#ongkir-result').html(output);
+                        }
+                    });
+                } else {
+                    $('#ongkir-result').html('Pilih semua opsi terlebih dahulu.');
+                }
+            });
+
+            $("#btn-ok").click(function() {
+                var harga = $('input[name="harga"]:checked').val();
+                var valHarga = $('#harga').val();
+                var valPpn = $('#ppn').val();
+
+                $.ajax({
+                    type: "get",
+                    url: "/submit/ongkir", // Ganti dengan URL endpoint server Anda
+                    data: {harga: harga},
+                    success: function(response) {
+                        // Asumsikan response adalah data yang ingin ditampilkan
+                        console.log ('berhasil');
+                        $("#hasil").html(`
+                          : Rp <input type="number" name="nama_produk" id="nama_produk" value="${response.harga}" readonly>
+                        `);
+                        
+                        var hargaTotal = parseInt(valHarga) + parseInt(valPpn)  + parseInt(response.harga) ;
+
+                        $("#total").html(`
+                        : Rp <input type="number" name="nama_produk" id="nama_produk" value="${hargaTotal}" readonly>
+                        `);
+                        
+                        $("#jasa-kirim").removeClass('d-block');
+                        $("#jasa-kirim").addClass('d-none');
+                    
+                    },
+                    error: function(error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- JS Vendor, Plugins & Activation Script Files -->
@@ -239,14 +559,14 @@
 
     <!-- Vendors JS -->
     <script src="/assets/js/vendor/modernizr-3.11.7.min.js"></script>
-    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="/assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <!-- <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="/assets/js/vendor/jquery-migrate-3.3.2.min.js"></script> -->
     <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
 
     <!-- Plugins JS -->
     <script src="/assets/js/plugins/swiper-bundle.min.js"></script>
     <script src="/assets/js/plugins/fancybox.min.js"></script>
-    <script src="/assets/js/plugins/jquery.nice-select.min.js"></script>
+    <!-- <script src="/assets/js/plugins/jquery.nice-select.min.js"></script> -->
 
     <!-- Custom Main JS -->
     <script src="/assets/js/main.js"></script>
@@ -260,54 +580,6 @@
         };
     </script>
 
-    <script>
-        $(document).ready(function() {
-            // Fetch provinces on page load
-            $.getJSON('/ongkir/getProvinces', function(data) {
-                var provinces = data.rajaongkir.results;
-                $.each(provinces, function(index, province) {
-                    $('#origin').append('<option value="' + province.province_id + '">' + province.province + '</option>');
-                    $('#destination').append('<option value="' + province.province_id + '">' + province.province + '</option>');
-                });
-            });
-
-            // Fetch cities based on selected province
-            $('#origin').change(function() {
-                var provinceId = $(this).val();
-                $.getJSON('/ongkir/getCities/' + provinceId, function(data) {
-                    var cities = data.rajaongkir.results;
-                    $('#origin-city').empty();
-                    $.each(cities, function(index, city) {
-                        $('#origin-city').append('<option value="' + city.city_id + '">' + city.city_name + '</option>');
-                    });
-                });
-            });
-
-            $('#destination').change(function() {
-                var provinceId = $(this).val();
-                $.getJSON('/ongkir/getCities/' + provinceId, function(data) {
-                    var cities = data.rajaongkir.results;
-                    $('#destination-city').empty();
-                    $.each(cities, function(index, city) {
-                        $('#destination-city').append('<option value="' + city.city_id + '">' + city.city_name + '</option>');
-                    });
-                });
-            });
-
-            // Submit form to check ongkir
-            $('#cek-ongkir-form').submit(function(event) {
-                event.preventDefault();
-                var formData = $(this).serialize();
-                $.post('/ongkir/checkOngkir', formData, function(data) {
-                    var results = data.rajaongkir.results[0].costs;
-                    $('#result').empty();
-                    $.each(results, function(index, cost) {
-                        $('#result').append('<p>' + cost.service + ': ' + cost.cost[0].value + ' IDR (' + cost.cost[0].etd + ' days)</p>');
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

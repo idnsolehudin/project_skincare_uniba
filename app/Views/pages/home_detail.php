@@ -26,14 +26,14 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                     <div class="col-lg-6">
                                         <!--== Start Product Info Area ==-->
                                         <div class="product-details-content"> 
-                                            <form action="/invoice" method="post">
+                                            <form action="/invoice" method="get">
                                                 <?= csrf_field(); ?>
                                                 <!-- id produk  -->
                                                 <input type="text" name="id_product" id="id_product" value="<?= $detail->id_product; ?>" style="background-color: transparent; border:none;" readonly>
                                                 
                                                 <!-- id user  -->
                                                 <?php 
-                                                function produk() {
+                                                function id_user() {
 
                                                     $timestamp = time();
                                                     $second = date("s", $timestamp);
@@ -41,7 +41,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                     return $second;
                                                }
                                               
-                                               $id = produk();
+                                               $id = id_user();
                                                 ?>
 
                                                 <input type="hidden" name="id_user" value="<?= $id; ?>">
@@ -104,7 +104,8 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
                                                     </div>  
                                                 </div>
                                                 <div class="product-details-cart-wishlist mt-4 ">
-                                                    <button type="submit" class="btn me-4">Tambah Ke Keranjang</button>
+                                                    <!-- <button type="submit" class="btn me-4">Beli Sekarang</button> -->
+                                                    <button type="submit" class="btn me-4">Beli Sekarang</button>
                                                     <!-- <button type="submit" class="btn">Beli Sekarang</button> -->
                                                 </div>
                                             </form>
